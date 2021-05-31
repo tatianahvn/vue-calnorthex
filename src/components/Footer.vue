@@ -120,7 +120,7 @@ export default {
 		text-transform: uppercase
 
 	span 
-		font-size: .9rem
+		font-size: 1rem
 		letter-spacing: 2px
 		cursor: pointer
 

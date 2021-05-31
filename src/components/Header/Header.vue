@@ -178,6 +178,8 @@ export default {
 			padding: 0
 			background: rgba(0,0,0,0)
 			height: 100%
+			font-family: $font-title
+			text-transform: uppercase
 		
 		.v-list-item-group
 			position: relative

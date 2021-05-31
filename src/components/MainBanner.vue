@@ -57,32 +57,34 @@ export default {
 		h1
 			color: white 
 			font-size: 1rem 
-			margin-bottom: 20px 
-			letter-spacing: 1px
+			margin-bottom: 15px 
 			text-align: center
+			font-family: $font-title
+			font-weight: 500
 			@include laptop
-				font-size: 2rem 
+				font-size: 3.5rem 
 
 		p 
 			color: #fff
 			line-height: 1.2
-			margin-bottom: 30px
+			margin-bottom: 40px
 			font-size: 1.3rem
-			font-weight: 500
+			font-weight: 400
 			text-align: justify
 			@include laptop 
-				font-size: 1.6rem
+				font-size: 1.3rem
 				text-align: center
 
 		a 
 			color: white 
 			text-decoration: none 
 			background-color: $base-red 
-			padding: 15px 35px 
+			padding: 15px 40px 
 			display: inline-block
-			border-radius: 50px
-			font-weight: 500
+			font-weight: 600
 			text-align: center
+			font-family: $font-title
+			text-transform: uppercase
 
 
 @keyframes banner 

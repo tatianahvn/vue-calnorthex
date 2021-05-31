@@ -34,7 +34,7 @@ export default {
 		width: 100%
 		padding: 1rem
 		height: 100% 
-		font-size: 1.3rem
+		font-size: 1.2rem
 		color: $soft-black
 		text-align: center
 		min-height: 650px 
@@ -43,7 +43,11 @@ export default {
 			text-align: left
 
 		.info-title 
-			font-size: 2rem
+			font-family: $font-title
+			letter-spacing: .18rem
+			text-transform: uppercase
+			line-height: 1.8rem
+			font-size: 1.5rem
 			font-weight: 600
 			color: $base-red
 

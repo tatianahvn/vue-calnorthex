@@ -7,6 +7,9 @@
         :key="item.title"
         :id="`item-${index}`"
       >
+      <figure style="width: 65px; margin: 0 auto;">
+        <img max-width="96" :src="require(`@/assets/images/icons/${item.icon}`)"/>
+      </figure>
       <h2 class="card-service-title">{{item.title}}</h2>
       <p class="card-service-description">{{item.description}}</p>
       </div>
@@ -20,10 +23,10 @@
     data(){
       return{
         services: [
-          { title: 'Service one', description: 'Proident laboris Lorem commodo culpa nisi ea cillum sunt ullamco elit ullamco labore. Minim reprehenderit id dolore ea consequat in aute non nisi cupidatat proident aliquip.', icon: '' },
-          { title: 'Service two', description: 'Proident laboris Lorem commodo culpa nisi ea cillum sunt ullamco elit ullamco labore. Minim reprehenderit id dolore ea consequat in aute non nisi cupidatat proident aliquip.', icon: '' },
-          { title: 'Service tree', description: 'Proident laboris Lorem commodo culpa nisi ea cillum sunt ullamco elit ullamco labore. Minim reprehenderit id dolore ea consequat in aute non nisi cupidatat proident aliquip.', icon: '' },
-          { title: 'Another service', description: 'Proident laboris Lorem commodo culpa nisi ea cillum sunt ullamco elit ullamco labore. Minim reprehenderit id dolore ea consequat in aute non nisi cupidatat proident aliquip.', icon: '' },
+          { title: 'Design', description: 'Proident laboris Lorem commodo culpa nisi ea cillum sunt ullamco elit ullamco labore. Minim reprehenderit id dolore.', icon: 'icon-drawing-96.png' },
+          { title: 'Concrete', description: 'Proident laboris Lorem commodo culpa nisi ea cillum sunt ullamco elit ullamco labore. Minim reprehenderit id dolore.', icon: 'icon-construction-96.png' },
+          { title: 'Solutions', description: 'Proident laboris Lorem commodo culpa nisi ea cillum sunt ullamco elit ullamco labore. Minim reprehenderit id dolore.', icon: 'icon-idea-96.png' },
+          { title: 'Construction', description: 'Proident laboris Lorem commodo culpa nisi ea cillum sunt ullamco elit ullamco labore. Minim reprehenderit id dolore.', icon: 'icon-bulldozer-96.png' },
         ]
       }
     }
@@ -39,7 +42,7 @@
     display: flex 
     flex-direction: column 
     width: 100% 
-    padding: 7rem 2rem
+    padding: 5rem 2rem
     color: white 
     text-align: center
     &-title 

@@ -42,9 +42,11 @@
     display: flex 
     flex-direction: column 
     width: 100% 
-    padding: 5rem 2rem
+    padding: 3rem
     color: white 
     text-align: center
+    @include laptop 
+      padding: 5rem 2rem
     &-title 
       font-family: $font-title
       letter-spacing: .18rem

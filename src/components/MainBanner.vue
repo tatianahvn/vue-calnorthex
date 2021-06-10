@@ -36,7 +36,7 @@ export default {
 	background-size: auto 100%
 	background-position: center
 	@include laptop
-		background-size: 100% 100% 
+		background-size: cover // cut photos for the same height
 
 	.filter-layout 
 		position: absolute 
@@ -88,18 +88,13 @@ export default {
 
 
 @keyframes banner 
-	0%, 20%
-		background-image: url("https://fondosmil.com/fondo/12406.jpg")
+	0%, 30%
+		background-image: url('../assets/images/hero-animated/slider05.jpg')
 	
-	25%, 45%
-		background-image: url("https://www.todopaisajes.com/Minis/ciudad-de-noche.jpg")
+	35%, 60%
+		background-image: url('../assets/images/hero-animated/slider02.jpg')
 	
-	50%, 70%
-		background-image: url("https://i.pinimg.com/originals/b9/1d/fd/b91dfdd21cf816a69ed544d6800680a4.jpg")
-	
-	75%, 100%
-		background-image: url("https://i.pinimg.com/originals/55/5e/52/555e52ca50443a4d366858dc5c83d540.jpg")
+	65%, 100%
+		background-image: url('../assets/images/hero-animated/slider04.jpg')
 
-	
-	
 </style>

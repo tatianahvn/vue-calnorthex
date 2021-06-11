@@ -55,6 +55,6 @@
       margin: 20px 0
     &-description
       font-size: 1.2rem
-      color: $white-80
+      color: $white-90
 
 </style>

@@ -3,6 +3,7 @@
     <MainBanner/>
     <MainDescription/>
     <MainServices/>
+    <MainGallery/>
   </div>
 </template>
 
@@ -11,12 +12,15 @@
 import MainBanner from '@/components/MainBanner'
 import MainDescription from '@/components/MainDescription'
 import MainServices from '@/components/MainServices'
+import MainGallery from '@/components/MainGallery'
+
 
 export default {
   components: {
     MainBanner,
     MainDescription,
-    MainServices
+    MainServices,
+    MainGallery
   }
 }
 </script>

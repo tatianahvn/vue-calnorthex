@@ -30,7 +30,7 @@ export default {
 	justify-content: center 
 	align-items: center
 	width: 100% 
-	height: 70vh
+	height: 80vh
 	max-height: 600px
 	animation: banner 20s infinite linear alternate
 	background-size: auto 100%

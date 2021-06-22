@@ -118,6 +118,7 @@
     padding: 1rem
     color: white 
     z-index: 2
+    cursor: default
     @include laptop 
       padding: 1rem 2rem
 
@@ -126,8 +127,8 @@
       letter-spacing: .18rem
       text-transform: uppercase
       color: white
-      margin: 20px 0
-      font-size: 1.1rem
+      margin-bottom: 5px
+      font-size: 1.2rem
       //width: 50%
       //max-width: 170px
       //margin: auto
@@ -137,7 +138,9 @@
     
     &:hover
       .service-icons
-        background-color: $base-red
+        background-color: $base-yellow
+    .service-icons 
+      margin: auto 1rem
 
   .icon-measure
     width: 55px

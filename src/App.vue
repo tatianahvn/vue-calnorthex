@@ -28,6 +28,11 @@ export default {
     Sidebar,
     Footer
   },
+  head:{
+    link: [
+      { rel: 'stylesheet', href: 'myProjects/webProject/icofont/css/icofont.min.css' },
+    ]
+  },
   data () {
     return {
       drawer: false,

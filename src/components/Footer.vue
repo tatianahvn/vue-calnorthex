@@ -21,17 +21,45 @@
 						<figure style="width:1.5rem; margin-right:10px">
 							<img src="../assets/images/icons/mail.svg"/>
 						</figure>
-						<span>calnorthex@outlook.com</span>
+						<span>calnorthex@gmail.com</span>
 					</div>
 					<div class="d-flex my-3">
 						<figure style="width:1.5rem; margin-right:10px">
 							<img src="../assets/images/icons/phone.svg"/>
 						</figure>
-						<span> 555-555-555</span>
+						<span>(707) 490-7975</span>
 					</div>
+					<br>
+					<h1 class="mb-5">CONTRACTORS LICENSE</h1>
+					<span><strong> #1051560</strong></span>
 				</div>
 			</v-col>
 			<v-col>
+				<div class="footer-contact d-flex flex-column align-center align-md-start">
+					<h1 class="mb-5">BUSINESS HOURS</h1>
+						<span>Monday to Friday - 8:00 AM to 6:00 PM</span>
+						<span>Saturday - By appoiment only</span>
+						<span>Sunday - Closed</span>
+						<br><br>
+					<div class="d-flex flex-column align-center align-md-start justify-center">
+					<h1 class="mb-3">Social Media</h1> 
+					<div class="d-flex flex-row">
+						<v-btn :class="`menu-item item-${index} my-3 mr-5`"
+							v-for="(item, index) in socialMedia"
+							:key="item.name"
+							:id="`item-${index}`"
+							:href="item.url"
+							icon
+							link
+						>
+							<v-icon dark link>{{`mdi-${item.name}`}}</v-icon>
+						</v-btn>
+					</div>
+				</div>
+				
+				</div>
+			</v-col>
+			<!--<v-col>
 				<div class="d-flex flex-column align-center align-md-start justify-center">
 					<h1 class="mb-5">Social Media</h1> 
 					<div class="d-flex flex-row">
@@ -43,14 +71,11 @@
 							icon
 							link
 						>
-							<!--<figure>
-								<img :src="require(`~/assets/images/icons/${item.name}.svg`)"/>
-							</figure>-->
 							<v-icon dark link>{{`mdi-${item.name}`}}</v-icon>
 						</v-btn>
 					</div>
 				</div>
-			</v-col>
+			</v-col>-->
 			
 		</div>
 		<div class="footer-legal">
@@ -75,7 +100,7 @@ export default {
 			socialMedia: [
 				{ name: 'facebook', url: '' },
 				{ name: 'instagram', url: '' },
-				{ name: 'twitter', url: '' }
+				//{ name: 'twitter', url: '' }
 			]
     }
   }

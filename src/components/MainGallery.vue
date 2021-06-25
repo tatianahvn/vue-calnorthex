@@ -43,7 +43,19 @@ export default {
     margin: 2rem auto
   .photo
     opacity: .7
+    transition: .5s
     &:hover 
       opacity: 1
+    &:hover:after
+      content: ''
+      position: absolute 
+      top: 5px
+      left: 5px
+      width: calc(100% - 10px)
+      height: calc(100% - 10px)
+      border: 1px solid #b7b7b7
+      
+  
+      
 
 </style>

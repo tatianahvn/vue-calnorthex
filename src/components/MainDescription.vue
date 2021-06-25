@@ -39,7 +39,7 @@ export default {
 		text-align: center
 		min-height: 650px 
 		@include laptop 
-			min-height: 600px 
+			min-height: 300px 
 			text-align: left
 
 		.info-title 
@@ -55,25 +55,25 @@ export default {
 		position: relative
 		width: 100%
 		padding: 1rem
-		min-height: 600px 
+		min-height: 550px 
 		.bg-portrait
 			position: relative
 			width: 100%
 			height: 75vh
 			margin: auto
-			background: url('../assets/images/splash02.jpg')
+			background: url('../assets/images/C1.jpg')
 			background-size: cover 
 			background-position: center
 			z-index: 9
 			@include laptop
-				width: 95%
-				height: 97%
+				width: calc(100% - 20px)
+				height: calc(100% - 15px)
 
 		&:before
 			@include laptop
 				content:''
-				width: 90%
-				height: 95%
+				width: calc(100% - 20px)
+				height: calc(100% - 20px)
 				margin: auto
 				z-index: 1
 				position: absolute

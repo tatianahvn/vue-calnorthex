@@ -3,6 +3,7 @@
     <MainBanner/>
     <MainDescription/>
     <MainServices/>
+    <MainLastJobs/>
     <MainGallery/>
   </div>
 </template>
@@ -13,6 +14,7 @@ import MainBanner from '@/components/MainBanner'
 import MainDescription from '@/components/MainDescription'
 import MainServices from '@/components/MainServices'
 import MainGallery from '@/components/MainGallery'
+import MainLastJobs from '@/components/MainLastJobs'
 
 
 export default {
@@ -20,6 +22,7 @@ export default {
     MainBanner,
     MainDescription,
     MainServices,
+    MainLastJobs,
     MainGallery
   }
 }

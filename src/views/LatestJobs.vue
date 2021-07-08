@@ -5,18 +5,20 @@
         <h1 class="font-title title-component">LATEST JOBS</h1>
       </v-row>
       <v-row>
-        {{ latestJob }}
+        {{ detailsJob }}
       </v-row>
     </div>
   </div>
 </template>
 
-<script>
-import { mapState } from 'vuex'
+<script> 
 
 export default {
+  name: 'LatestJobs',
   computed: {
-    ...mapState(['latestJob'])
+    detailsJob(){
+        return this.$store.state.detailsJob
+    },
   }
 }
 </script>

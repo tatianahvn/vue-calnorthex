@@ -23,9 +23,9 @@
           <v-btn
             text
             color="teal accent-4"
-            @click="reveal = false"
+            @click="openPageProject"
           >
-            Close
+            Show more
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+
 export default {
   props:{
     info: {
@@ -45,6 +46,19 @@ export default {
   data(){
     return{
       reveal: false
+    }
+  },
+  methods:{
+    openPageProject(){
+      /* 
+        Note: Inside of a Vue instance, you have access to the router instance as $router. You can therefore call this.$router.push.
+      */
+      this.$router.push({
+        path: '/jobs'
+      })
+
+      this.$store.commit('setDetails', this.info)
+
     }
   }
 }
@@ -66,7 +80,7 @@ export default {
     opacity: 1
     position: absolute
     width: 100%
-    height: 50%
+    height: 70%
     background-color: transparent!important
     box-shadow: none!important
     z-index: 3

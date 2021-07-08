@@ -5,9 +5,9 @@
         <h1 class="font-title title-component">LATEST JOBS</h1>
       </v-row>
       <v-row>
-        <v-col cols="4"
-          v-for="job in latestJobs"
-          :key="job"
+        <v-col cols="3"
+          v-for="(job, index) in latestJobs"
+          :key="index"
         >
           <AnimatedCard :info="job"/>
         </v-col>
@@ -29,8 +29,13 @@ export default {
       { title: 'Driveway', description: 'late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’', image: 'B2.jpg' },
       { title: 'Driveway', description: 'late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’', image: 'B2.jpg' },
       { title: 'Driveway', description: 'late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’', image: 'B2.jpg' },
+      { title: 'Driveway', description: 'late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’', image: 'B2.jpg' },
     ]
   }),
 
 }
 </script>
+<style lang="sass" scoped>
+  .latestJobs
+    margin: 5em 0 6em
+</style>

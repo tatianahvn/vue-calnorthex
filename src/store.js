@@ -5,10 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state:{
-    lastJob: ['Prueba']
+    detailsJob: {},
   },
   mutations: {
-
+    setDetails(state, info) {
+      state.detailsJob = info
+  },
   },
   actions:{
     

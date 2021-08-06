@@ -54,6 +54,7 @@ export default {
     color: $dark-gray
   .latestJob-photo
     height: 87vh
+    max-height: 750px
   .main-description
     background-color: #f9f9f9
   p
@@ -73,6 +74,6 @@ export default {
       filter: grayscale(100%) contrast(110%) brightness(90%)
       transition: all .3s
       &:hover 
-        filter: grayscale(0%) saturate(200%)
+        filter: grayscale(0%) saturate(125%)
   
 </style>

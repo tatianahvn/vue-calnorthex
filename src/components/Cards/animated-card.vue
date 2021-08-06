@@ -4,7 +4,7 @@
     @mouseenter="reveal = true" 
     @mouseleave="reveal = false"
   >
-    <v-img class="latestJob-photo" :src="require(`@/assets/images/gallery/B2.jpg`)">
+    <v-img class="latestJob-photo" :src="require(`@/assets/images/gallery/${info.image}`)">
     </v-img>
     <v-expand-transition>
       <v-card 
@@ -15,9 +15,10 @@
           <p class="text-h4 txt-white">
             {{ info.title }}
           </p>
+          <!-- Description disabled 
           <p class="txt-white">
             {{ info.description }}
-          </p>
+          </p> -->
         </v-card-text>
         <v-card-actions class="pt-0">
           <v-btn
@@ -53,6 +54,7 @@ export default {
       /* 
         Note: Inside of a Vue instance, you have access to the router instance as $router. You can therefore call this.$router.push.
       */
+      window.scrollTo(0, top)
       this.$router.push({
         path: '/jobs'
       })
@@ -65,6 +67,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  .latestJobs-card
+    height: 380px
+  .latestJob-photo
+    height: 100%
   .latestJobs-card
     &:hover::before
       content: ''
@@ -80,11 +86,17 @@ export default {
     opacity: 1
     position: absolute
     width: 100%
-    height: 70%
+    height: 50%
     background-color: transparent!important
     box-shadow: none!important
     z-index: 3
-
+  .v-card__text
+    position: relative
+    min-height: 100px
+    p 
+      position: absolute
+      bottom: 0
+      left: 15px
   .txt-white
     color: white
 </style>

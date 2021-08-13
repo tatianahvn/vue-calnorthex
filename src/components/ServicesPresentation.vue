@@ -7,6 +7,14 @@
       <p>
         From conception to completion, our entire team of estimators, designers, project managers and experienced executives make our clients’ needs a priority. We have experience in a wide variety of projects and delivery methods, and use both time-proven practices and cutting-edge techniques to make sure our customers’ projects meet their maximum potential.
       </p>
+      <v-btn
+        large
+        outlined
+        class="mt-8"
+        
+      >
+        CONTACT US FOR A PROJECT QUOTE
+      </v-btn>
     </div>
   </section>
 </template>
@@ -26,6 +34,9 @@
   background-color: #dcdcdc
   padding: 4rem 0 5rem
 
+  .container 
+    text-align: center
+
   .title-component 
     font-size: 1.8rem 
     color: #464646
@@ -36,7 +47,7 @@
   
   p 
     text-align: center
-    width: 60% 
+    width: 65% 
     margin: auto
     color: #464646
     font-size: 1.2rem

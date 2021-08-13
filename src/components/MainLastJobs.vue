@@ -5,6 +5,9 @@
         <h1 class="font-title title-component">LATEST JOBS</h1>
       </v-row>
       <v-row>
+        <p>We Have a Wealth Of Building Experience …and we are not afraid to use it. Take a look at our recent projects</p>
+      </v-row>
+      <v-row>
         <v-col cols="3"
           v-for="(job, index) in latestJobs"
           :key="index"
@@ -90,4 +93,6 @@ export default {
 <style lang="sass" scoped>
   .latestJobs
     margin: 3em 0 6em
+    p 
+      font-size: 1.2rem
 </style>

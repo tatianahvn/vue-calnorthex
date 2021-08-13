@@ -1,10 +1,7 @@
 <template>
-  <section class="services container--fluid" id="services" v-on:scroll.passive="handleScroll" >
+  <section class="services container--fluid" id="section-services" v-on:scroll.passive="handleScroll" >
     <div class="filter-layout"></div>
     <div class="services-wrap">
-      <v-row>
-        <h1 class="font-title title-component">OUR SERVICES</h1>
-      </v-row>
       <v-row>
         <v-col cols="6" style="z-index:2">
           <div class="card-service services-left"

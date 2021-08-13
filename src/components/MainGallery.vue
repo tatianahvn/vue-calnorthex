@@ -1,5 +1,5 @@
 <template>
-  <section class="container--fluid gallery">
+  <section class="container--fluid gallery" id="section-gallery">
     <div class="gallery-wrap container">
       <v-row>
         <h1 class="font-title title-component">GALLERY</h1>

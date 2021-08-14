@@ -6,7 +6,6 @@
 		clipped-right
 		color="#fff"
 		dense
-		flat
     >
       <v-container fluid class="pa-0">
         <div class="main-nav">
@@ -29,7 +28,7 @@
 			</v-col>
           <v-col v-if="!isMobile" class="pa-0">
             <v-row class="wrap-menu menu">
-              <v-list flat  v-if="isHome">
+              <v-list text v-if="isHome">
 				<v-list-item-group 
 					v-model="menuSelection"
 					active-class="active"
@@ -47,7 +46,7 @@
 					</v-list-item>
 				</v-list-item-group>
               </v-list>
-              <v-list flat v-else>
+              <v-list text v-else>
 				<v-list-item-group>
 					<v-list-item 
 						v-for="item in navItems"

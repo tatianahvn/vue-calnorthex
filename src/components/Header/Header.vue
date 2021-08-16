@@ -219,6 +219,6 @@ export default {
 	.lg-calnorthex
 		width: 150px
 		@include laptop 
-			width: 280px
+			width: 240px
 
 </style>

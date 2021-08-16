@@ -1,25 +1,27 @@
 <template>
-  <section class="main-banner" id="home">
-    <div class="filter-layout"></div>
-    <div class="info-banner">
-      <h1>{{ title }}</h1> 
-      <p>{{ description }}</p> 
-      <a href="#">{{ ctaBtn }}</a>
-    </div>
+	<section class="main-banner" id="home">
+		<div class="filter-layout"></div>
+		<div class="info-banner">
+			<div class="info-logo">
 
-  </section>
+			</div>
+			<h1>{{ title }}</h1> 
+			<p>{{ description }}</p> 
+			<a href="#">{{ ctaBtn }}</a>
+		</div>
+	</section>
 </template>
 <script>
 
 export default {
-  name: 'MainBanner',
-  data() {
-    return {
-      title: 'CALNORTHEX CONCRETE',
-      description: 'Velit velit dolore mollit proident ea ipsum cupidatat nulla irure nisi ad sit minim sunt. Proident culpa eiusmod excepteur fugiat mollit minim in ullamco dolor enim in in.',
-      ctaBtn: 'Show more',
-    }
-  },
+	name: 'MainBanner',
+		data() {
+		return {
+			title: 'YOU DREAM IT & WE BUILD IT',
+			description: 'Our Team Specialize in Design and Build Concrete Solutions',
+			ctaBtn: 'Show more',
+		}
+	},
 }
 </script>
 <style lang="sass" scoped>
@@ -30,8 +32,8 @@ export default {
 	justify-content: center 
 	align-items: center
 	width: 100% 
-	height: 80vh
-	max-height: 600px
+	height: 85vh
+	max-height: 700px
 	animation: banner 20s infinite linear alternate
 	background-size: auto 100%
 	background-position: center
@@ -44,7 +46,7 @@ export default {
 		height: 100% 
 		top: 0
 		left: 0
-		background-color: rgb(0 0 0 / 45%)
+		background-color: rgb(0 0 0 / 35%)
 
 	.info-banner 
 		width: 100% 
@@ -60,9 +62,9 @@ export default {
 			margin-bottom: 15px 
 			text-align: center
 			font-family: $font-title
-			font-weight: 500
+			font-weight: 600
 			@include laptop
-				font-size: 3.5rem 
+				font-size: 2.5rem 
 
 		p 
 			color: #fff
@@ -79,21 +81,27 @@ export default {
 			color: white 
 			text-decoration: none 
 			background-color: $base-red 
-			padding: 15px 40px 
+			padding: 10px 35px 
 			display: inline-block
 			font-weight: 600
 			text-align: center
 			font-family: $font-title
 			text-transform: uppercase
 
+	.info-logo
+		width: 445px
+		height: 145px
+		mask: url('../assets/images/img-lg-calnorthex.png')
+		mask-size: cover
+		background-color: white
+		margin: auto
+
 
 @keyframes banner 
 	0%, 30%
 		background-image: url('../assets/images/hero-animated/slider05.jpg')
-	
 	35%, 60%
 		background-image: url('../assets/images/hero-animated/slider02.jpg')
-	
 	65%, 100%
 		background-image: url('../assets/images/hero-animated/slider04.jpg')
 

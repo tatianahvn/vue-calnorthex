@@ -2,8 +2,10 @@
   <div class="home">
     <MainBanner/>
     <MainDescription/>
+    <ServicesPresentation/>
     <MainServices/>
     <MainLastJobs/>
+    <BannerWeLove/>
     <MainGallery/>
   </div>
 </template>
@@ -15,6 +17,8 @@ import MainDescription from '@/components/MainDescription'
 import MainServices from '@/components/MainServices'
 import MainGallery from '@/components/MainGallery'
 import MainLastJobs from '@/components/MainLastJobs'
+import ServicesPresentation from '@/components/ServicesPresentation'
+import BannerWeLove from '@/components/BannerWeLove'
 
 
 export default {
@@ -22,8 +26,10 @@ export default {
     MainBanner,
     MainDescription,
     MainServices,
+    ServicesPresentation,
     MainLastJobs,
-    MainGallery
+    MainGallery,
+    BannerWeLove
   }
 }
 </script>

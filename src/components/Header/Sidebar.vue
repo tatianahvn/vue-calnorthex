@@ -8,7 +8,7 @@
     app
     >
     <div class="head-sidebar">
-      <v-btn @click="hideSidebar()" :color="styleColors.baseRed" flat icon ><v-icon>mdi-close</v-icon></v-btn>
+      <v-btn @click="hideSidebar()" :color="styleColors.baseRed" icon ><v-icon>mdi-close</v-icon></v-btn>
     </div>
       <v-list dense nav>
         <v-list-item  

@@ -2,12 +2,15 @@
   <section class="main-description container my-10">
     <div class="main-description-wrap d-flex flex-column flex-md-row">
       <v-col class="main-info" pa="0">
-				<p class="info-title">
-					This is only a little text about something great that you can offer to your clients
-				</p>
+		<p class="info-title">
+			YOUR PROJECT SUCCESS IS OUR BUSINESS
+		</p>
         <p>
-          Velit elit ad consequat nulla id adipisicing quis dolor. Anim sunt nostrud ex aliqua id enim officia. Veniam laboris occaecat incididunt ut commodo Lorem nisi tempor deserunt ullamco dolore magna. Ipsum Lorem non labore quis incididunt. Consectetur voluptate nulla tempor amet magna minim aliqua.
+			The heartbeat of our company is always in people, whether it’s our customers or employees. We strive to improve and exceed expectations. We know your site schedules are critical therefore you can count on us to supply and install your underfloor heating system on time, within budget and with our outstanding service. We’ve always been ambitious and we want to grow profitably to be market leader, but, our way – with enthusiastic happy customers and as an honest, family-friendly employer.
         </p>
+		<p>
+			It’s simple, we thrive together with our customers, suppliers and staff in the most respectful, helpful and transparent way.
+		</p>
 				<div class="squares">
 					<div class="square-red"></div>
 					<div class="square-gray"></div>
@@ -50,6 +53,10 @@ export default {
 			font-size: 1.5rem
 			font-weight: 600
 			color: $base-red
+		
+		p 
+			line-height: 2rem
+			color: #666
 
 	.complement  
 		position: relative

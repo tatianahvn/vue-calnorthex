@@ -6,58 +6,57 @@
 		clipped-right
 		color="#fff"
 		dense
-		flat
     >
       <v-container fluid class="pa-0">
         <div class="main-nav">
-					<v-col class="pa-0">
-						<v-row class="wrap-identity">
-							<router-link to="/">
-								<figure class="lg-calnorthex">
-									<img src="@/assets/images/img-lg-calnorthex.png"/>
-								</figure>
-							</router-link>
-							<p class="main-title mb-0">Calnorthex Concrete</p>
-							<v-spacer v-if="isMobile"></v-spacer>
-							<v-btn v-if="isMobile"
-								@click.stop="showSidebar()"
-								icon
-							>
-								<v-icon>mdi-menu</v-icon>
-							</v-btn>
-						</v-row>
-					</v-col>
+			<v-col class="pa-0">
+				<v-row class="wrap-identity">
+					<router-link to="/">
+						<figure class="lg-calnorthex">
+							<img src="@/assets/images/img-lg-calnorthex.png"/>
+						</figure>
+					</router-link>
+					<p class="main-title mb-0">Calnorthex Concrete</p>
+					<v-spacer v-if="isMobile"></v-spacer>
+					<v-btn v-if="isMobile"
+						@click.stop="showSidebar()"
+						icon
+					>
+						<v-icon>mdi-menu</v-icon>
+					</v-btn>
+				</v-row>
+			</v-col>
           <v-col v-if="!isMobile" class="pa-0">
             <v-row class="wrap-menu menu">
-              <v-list flat  v-if="isHome">
-								<v-list-item-group 
-									v-model="menuSelection"
-									active-class="active"
-								>
-									<v-list-item 
-										v-for="(item, index) in navItems"
-										:key="item.title"
-										link
-										:class="`menu-item item-${index}`"
-										:id="`item-${index}`"
-										:ref="`item-${index}`"
-										@click="goToSection(item.id)"
-									>
-										<v-list-item-title>{{item.title}}</v-list-item-title>
-									</v-list-item>
-								</v-list-item-group>
+              <v-list text v-if="isHome">
+				<v-list-item-group 
+					v-model="menuSelection"
+					active-class="active"
+				>
+					<v-list-item 
+						v-for="(item, index) in navItems"
+						:key="item.title"
+						link
+						:class="`menu-item item-${index}`"
+						:id="`item-${index}`"
+						:ref="`item-${index}`"
+						@click="goToSection(item.id)"
+					>
+						<v-list-item-title>{{item.title}}</v-list-item-title>
+					</v-list-item>
+				</v-list-item-group>
               </v-list>
-              <v-list flat v-else>
-								<v-list-item-group>
-									<v-list-item 
-										v-for="item in navItems"
-										:key="item.title"
-										link
-										@click="goHome()"
-									>
-										<v-list-item-title>{{item.title}}</v-list-item-title>
-									</v-list-item>
-								</v-list-item-group>
+              <v-list text v-else>
+				<v-list-item-group>
+					<v-list-item 
+						v-for="item in navItems"
+						:key="item.title"
+						link
+						@click="goHome()"
+					>
+						<v-list-item-title>{{item.title}}</v-list-item-title>
+					</v-list-item>
+				</v-list-item-group>
               </v-list>
             </v-row>
           </v-col>
@@ -120,10 +119,15 @@ export default {
 		},
 		goToSection(elID){
 			if(elID == 'home'){
-				alert('goHome')
 				this.goHome()
+			}else{
+				if(this.isHome){
+					document.getElementById(`${elID}`).scrollIntoView({ behavior: 'smooth'})
+				}else{
+					this.goHome()
+					document.getElementById(`${elID}`).scrollIntoView({ behavior: 'smooth'})
+				}	
 			}
-			//document.getElementById(`${elID}`).scrollIntoView({ behavior: 'smooth'})
 		},
 		goHome(){
 			this.$router.push('/')
@@ -215,6 +219,6 @@ export default {
 	.lg-calnorthex
 		width: 150px
 		@include laptop 
-			width: 280px
+			width: 240px
 
 </style>

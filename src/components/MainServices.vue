@@ -1,10 +1,7 @@
 <template>
-  <section class="services container--fluid" id="services" v-on:scroll.passive="handleScroll" >
+  <section class="services container--fluid" v-on:scroll.passive="handleScroll" >
     <div class="filter-layout"></div>
     <div class="services-wrap">
-      <v-row>
-        <h1 class="font-title title-component">OUR SERVICES</h1>
-      </v-row>
       <v-row>
         <v-col cols="6" style="z-index:2">
           <div class="card-service services-left"
@@ -15,7 +12,7 @@
             <span :class="`service-icons ${item.icon}`"></span>
             <v-col>
               <h2 class="card-service-title">{{item.title}}</h2>
-              <p class="card-service-description">{{item.description}}</p>
+              <!--<p class="card-service-description">{{item.description}}</p>-->
             </v-col>
           </div>
         </v-col>
@@ -29,7 +26,7 @@
             <span :class="`service-icons ${item.icon}`"></span>
             <v-col>
               <h2 class="card-service-title">{{item.title}}</h2>
-              <p class="card-service-description">{{item.description}}</p>
+              <!--<p class="card-service-description">{{item.description}}</p>-->
             </v-col>
           </div>
         </v-col>
@@ -120,7 +117,7 @@
     z-index: 2
     cursor: default
     @include laptop 
-      padding: 1rem 2rem
+      padding: 3rem 2rem
 
     &-title 
       font-family: $font-title

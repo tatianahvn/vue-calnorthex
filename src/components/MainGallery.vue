@@ -1,61 +1,59 @@
 <template>
-  <section class="container--fluid gallery">
-    <div class="gallery-wrap container">
+  <section class="container--fluid gallery" id="section-gallery">
+    <div class="gallery-wrap py-10">
+      <div class="d-flex flex-column justify-center align-center">
+        <p class="font-title header-title mx-auto py-10">GALLERY</p>
+      </div>
       <v-row>
-        <h1 class="font-title title-component">GALLERY</h1>
-      </v-row>
-      <v-row>
-        <v-col cols="9">
-          <v-row>
-            <v-col cols="6" class="pa-0 pr-3">
-              <v-img class="photo" height="350px" :src="require(`@/assets/images/gallery/D1.jpg`)"></v-img>
-            </v-col>
-            <v-col cols="6" class="pa-0 pl-3">
-              <v-img  class="photo" height="350px" :src="require(`@/assets/images/gallery/G5.jpg`)"></v-img>
-            </v-col>
-          </v-row>
+        <v-col 
+          cols="4"
+          v-for="(item, index) in galleryItems"
+          :key="index"
+        >
+          <GalleryCard :item="item"/>
         </v-col>
-        <v-col cols="3"><v-img class="photo" height="350px" :src="require(`@/assets/images/gallery/B2.jpg`)"></v-img></v-col>
-        <v-col cols="3"><v-img class="photo" height="350px" :src="require(`@/assets/images/gallery/G6.jpg`)"></v-img></v-col>
-        <v-col cols="3"><v-img class="photo" height="350px" :src="require(`@/assets/images/gallery/H12.jpg`)"></v-img></v-col>
-        <v-col cols="3"><v-img class="photo" height="350px" :src="require(`@/assets/images/gallery/E3.jpg`)"></v-img></v-col>
-        <v-col cols="3"><v-img class="photo" height="350px" :src="require(`@/assets/images/gallery/B3.jpg`)"></v-img></v-col>
       </v-row>
     </div>
   </section>
 </template>
 
 <script>
+import GalleryCard from './Cards/gallery-card.vue'
 export default {
+  components: { GalleryCard },
+
+  data(){
+    return{
+      galleryItems: [
+        { title: 'Driveway', location: 'Coronado, CA', src: 'C8.jpg' }, 
+        { title: 'Driveway', location: 'Coronado, CA', src: 'A1.jpg' }, 
+        { title: 'Driveway', location: 'Coronado, CA', src: 'E3.jpg' }, 
+
+        { title: 'Driveway', location: 'Coronado, CA', src: 'G5.jpg' }, 
+        { title: 'Driveway', location: 'Coronado, CA', src: 'G6.jpg' }, 
+        { title: 'Driveway', location: 'Coronado, CA', src: 'H12.jpg' }, 
+
+        { title: 'Driveway', location: 'Coronado, CA', src: 'D1.jpg' }, 
+        { title: 'Driveway', location: 'Coronado, CA', src: 'B2.jpg' }, 
+        { title: 'Driveway', location: 'Coronado, CA', src: 'B3.jpg' }, 
+      ]
+    }
+  }
 
 }
 </script>
 
 <style lang="sass" scoped>
 .gallery
-  background-color: $dark-black
-  .title-component 
-    font-size: 1.8rem 
-    color: white
-    text-align: center
-    z-index: 2
+  background-color: white
+  .header-min
+    font-size: 1rem
+    text-transform: uppercase
     letter-spacing: 5px
-    margin: 2rem auto
-  .photo
-    opacity: .7
-    transition: .5s
-    &:hover 
-      opacity: 1
-    &:hover:after
-      content: ''
-      position: absolute 
-      top: 5px
-      left: 5px
-      width: calc(100% - 10px)
-      height: calc(100% - 10px)
-      border: 1px solid #b7b7b7
-      
+    color: black
+  .header-title
+    font-size: 2.5rem
+    letter-spacing: 5px
+    font-weight: 500
   
-      
-
 </style>

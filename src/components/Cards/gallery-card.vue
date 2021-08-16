@@ -7,6 +7,7 @@
     <v-img 
       class="photo" 
       height="40vh"
+      min-height="450px"
       :src="require(`@/assets/images/gallery/${item.src}`)">
     </v-img>
     <div class="layout" v-if="activeCard" transition="fade-transition">

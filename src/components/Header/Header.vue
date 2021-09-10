@@ -40,7 +40,7 @@
 						:class="`menu-item item-${index}`"
 						:id="`item-${index}`"
 						:ref="`item-${index}`"
-						@click="goToSection(item.id)"
+						@click="redirect(item.type, item.id)"
 					>
 						<v-list-item-title>{{item.title}}</v-list-item-title>
 					</v-list-item>
@@ -114,6 +114,15 @@ export default {
 		}
   },
 	methods:{
+		redirect(type, value){
+			if(type == 'scroll'){
+				this.goToSection(value)
+			}else{
+				this.$router.push({
+					path: `/${ value }`
+				})
+			}
+		},
 		onResize() {
 			this.windowSize = { x: window.innerWidth, y: window.innerHeight }
 		},

@@ -47,9 +47,13 @@
   
   p 
     text-align: center
-    width: 65% 
+    width: 80% 
     margin: auto
     color: #464646
-    font-size: 1.2rem
+    font-size: 1.4rem
+    @include laptop 
+      width: 65% 
+      font-size: 1.2rem
+
 
 </style>

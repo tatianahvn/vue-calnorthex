@@ -39,7 +39,7 @@ export default {
       title: 'Qué ver',
       //logoCinepolis: require('~/assets/images/lg-cinepolis-new.png'),
       items: [
-          { title: 'Home', id: 'home', type: 'url' },
+          /*{ title: 'Home', id: 'home', type: 'url' },*/
           { title: 'Gallery', id: 'section-gallery', type: 'scroll' },
           { title: 'Services', id: 'section-services', type: 'scroll' },
 					/*{ title: 'About us', id: 'about', type: 'url' },*/

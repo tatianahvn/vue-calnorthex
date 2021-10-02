@@ -3,7 +3,7 @@
 		<div class="filter-layout"></div>
 		<div class="info-banner">
 			<div class="info-logo">
-
+				<!-- Logo injected by background styles -->
 			</div>
 			<h1>{{ title }}</h1> 
 			<p>{{ description }}</p> 
@@ -57,14 +57,15 @@ export default {
 			max-width: 800px
 
 		h1
+			font-size: 1.2rem
+			margin: 2rem auto
 			color: white 
-			font-size: 1rem 
-			margin-bottom: 15px 
 			text-align: center
 			font-family: $font-title
 			font-weight: 600
 			@include laptop
-				font-size: 2.5rem 
+				font-size: 2.5rem
+				margin: 1rem auto 
 
 		p 
 			color: #fff
@@ -72,7 +73,7 @@ export default {
 			margin-bottom: 40px
 			font-size: 1.3rem
 			font-weight: 400
-			text-align: justify
+			text-align: center
 			@include laptop 
 				font-size: 1.3rem
 				text-align: center
@@ -89,12 +90,17 @@ export default {
 			text-transform: uppercase
 
 	.info-logo
-		width: 445px
-		height: 145px
 		mask: url('../assets/images/img-lg-calnorthex.png')
 		mask-size: cover
 		background-color: white
 		margin: auto
+		width: 70vw
+		height: 20vw
+
+		@include laptop
+			width: 445px
+			height: 145px
+		
 
 
 @keyframes banner 

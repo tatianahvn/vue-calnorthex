@@ -7,7 +7,7 @@
 		color="#fff"
 		dense
     >
-      <v-container fluid class="pa-0">
+	<v-container fluid class="pa-0">
         <div class="main-nav">
 			<v-col class="pa-0">
 				<v-row class="wrap-identity">
@@ -26,13 +26,20 @@
 					</v-btn>
 				</v-row>
 			</v-col>
-          <v-col v-if="!isMobile" class="pa-0">
+		<v-col v-if="!isMobile" class="pa-0">
             <v-row class="wrap-menu menu">
-              <v-list text v-if="isHome">
+			<v-list text>
 				<v-list-item-group 
 					v-model="menuSelection"
 					active-class="active"
 				>
+					<v-list-item 
+						link
+						class="menu-item item-home"
+						@click="this.goHome"
+					>
+						<v-list-item-title>Home</v-list-item-title>
+					</v-list-item>
 					<v-list-item 
 						v-for="(item, index) in navItems"
 						:key="item.title"
@@ -45,23 +52,11 @@
 						<v-list-item-title>{{item.title}}</v-list-item-title>
 					</v-list-item>
 				</v-list-item-group>
-              </v-list>
-              <v-list text v-else>
-				<v-list-item-group>
-					<v-list-item 
-						v-for="item in navItems"
-						:key="item.title"
-						link
-						@click="goHome()"
-					>
-						<v-list-item-title>{{item.title}}</v-list-item-title>
-					</v-list-item>
-				</v-list-item-group>
-              </v-list>
+				</v-list>
             </v-row>
-          </v-col>
-        </div>
-      </v-container>
+			</v-col>
+		</div>
+		</v-container>
     </v-app-bar>
 </template>
 
@@ -76,35 +71,33 @@ export default {
 			require: false
     }
 	},
-	data: () => ({
+	data:()=>({
 		drawer: false,
 		fixed: false,
 		miniVariant: false,
 		right: true,
 		activeSidebar: false,
 		menuSelection: 0,
-		//logoCinepolis: require('~/assets/images/lg-cinepolis-new.png'),
-		windowSize: {
+		windowSize:{
 			x: 0,
 			y: 0
 		},
-		styleColors: {
+		styleColors:{
 			baseRed: '#9C171F',
 			baseGray: '#58585C'
 		}
 	}),
 	mounted(){
-    this.onResize()
-		
-  },
+		this.onResize()
+	},
 	computed: {
-    isHome(){
-      if(this.$route.path == '/'){
-        return true
-      }else{
-        return false
-      }
-    },
+		isHome(){
+			if(this.$route.path == '/'){
+				return true
+			}else{
+				return false
+			}
+		},
 		isMobile(){
 			if(this.windowSize.x < 960){
 				return true
@@ -112,12 +105,28 @@ export default {
 				return false
 			}
 		}
-  },
+	},
 	methods:{
 		redirect(type, value){
 			if(type == 'scroll'){
-				this.goToSection(value)
-			}else{
+				let data = {
+					scrollingActive: true,
+					sectionID: value
+				}
+				this.$store.commit('setRedirectMode', data)
+
+				if(this.isHome)
+					document.getElementById(`${value}`).scrollIntoView({ behavior: 'smooth'})
+				else 
+					this.goHome()
+
+			}else {
+				let data = {
+					scrollingActive: false,
+					sectionID: value
+				}
+				this.$store.commit('setRedirectMode', data)
+
 				this.$router.push({
 					path: `/${ value }`
 				})
@@ -126,17 +135,13 @@ export default {
 		onResize() {
 			this.windowSize = { x: window.innerWidth, y: window.innerHeight }
 		},
-		goToSection(elID){
-			if(elID == 'home'){
-				this.goHome()
-			}else{
-				if(this.isHome){
-					document.getElementById(`${elID}`).scrollIntoView({ behavior: 'smooth'})
-				}else{
-					this.goHome()
-					document.getElementById(`${elID}`).scrollIntoView({ behavior: 'smooth'})
-				}	
+		goToDefaultHome(){
+			let data = {
+				scrollingActive: false,
+				sectionID: null
 			}
+			this.$store.commit('setRedirectMode', data)
+			this.goHome()
 		},
 		goHome(){
 			this.$router.push('/')
@@ -145,35 +150,35 @@ export default {
 			this.activeSidebar = !this.activeSidebar
 			this.$emit('handlerSidebar', this.activeSidebar)
 		}
-  }
+	}
 
 }
 </script>
 
 <style lang="sass" scoped>
 .app-nav
-	.main-title
-		padding-top: 8px
-		color: white
-		font-size: 2rem
-		display: none
-	.main-nav 
+.main-title
+	padding-top: 8px
+	color: white
+	font-size: 2rem
+	display: none
+.main-nav 
+	display: flex 
+	flex-direction: row 
+	justify-content: center 
+	align-content: center
+	height: 100%
+	.wrap-identity 
 		display: flex 
-		flex-direction: row 
-		justify-content: center 
+		justify-content: flex-start
 		align-content: center
 		height: 100%
-		.wrap-identity 
-			display: flex 
-			justify-content: flex-start
-			align-content: center
-			height: 100%
-		.wrap-menu
-			display: flex 
-			justify-content: space-evenly
-			align-content: center 
-			height: 100% 
-			font-size: 1.5rem
+	.wrap-menu
+		display: flex 
+		justify-content: space-evenly
+		align-content: center 
+		height: 100% 
+		font-size: 1.5rem
 	&:before 
 		content: ''
 		width: 100% 
@@ -181,53 +186,47 @@ export default {
 		position: absolute 
 		left: 0
 		bottom: 0
-		//background-color: $base-red
 		background: linear-gradient(90deg, $base-gray 0, $base-red)
 
-	.menu
-		.v-list
-			display: flex
-			flex-direction: row
-			padding: 0
-			background: rgba(0,0,0,0)
+.menu
+	.v-list
+		display: flex
+		flex-direction: row
+		padding: 0
+		background: rgba(0,0,0,0)
+		height: 100%
+		font-family: $font-title
+		text-transform: uppercase
+	
+	.v-list-item-group
+		position: relative
+		display: flex
+		align-items: center
+		height: 100%
+		.v-list-item
+			padding: 0 16px
+			text-decoration: none
+			min-width: 8.5rem
+			text-align: center
 			height: 100%
-			font-family: $font-title
-			text-transform: uppercase
-		
-		.v-list-item-group
-			position: relative
-			display: flex
-			align-items: center
-			height: 100%
-			.v-list-item
-				padding: 0 16px
-				text-decoration: none
-				min-width: 8.5rem
-				text-align: center
-				height: 100%
-				color: $base-gray
-				&:hover
-					//background-color: $light-red
-		.menu-item.active 
-			color: $base-red
-			//background-color: $base-red
-		
-		.v-list-item__title
-			font-size: 1rem
-			font-weight: 500
-			//text-transform: uppercase
+			color: $base-gray
+	.menu-item.active 
+		color: $base-red
+	
+	.v-list-item__title
+		font-size: 1rem
+		font-weight: 500
 
-	.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)
-		color: $soft-black !important
-		&:hover 
-			color: $base-red !important
+.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)
+	color: $soft-black !important
+	&:hover 
+		color: $base-red !important
 
-	.theme--light.v-btn.v-btn--icon
-		color: $base-gray
+.theme--light.v-btn.v-btn--icon
+	color: $base-gray
 
-	.lg-calnorthex
-		width: 150px
-		@include laptop 
-			width: 240px
-
+.lg-calnorthex
+	width: 230px
+	@include laptop
+		width: 240px
 </style>

@@ -3,7 +3,7 @@
     <div class="filter-layout"></div>
     <div class="services-wrap">
       <v-row>
-        <v-col cols="6" style="z-index:2">
+        <v-col sm="12" md="6" style="z-index:2">
           <div class="card-service services-left"
             v-for="(item, index) in servicesLeft"
             :key="item.title"
@@ -17,7 +17,7 @@
           </div>
         </v-col>
 
-        <v-col cols="6" style="z-index:2">
+        <v-col sm="12" md="6" style="z-index:2">
           <div class="card-service services-right"
             v-for="(item, index) in servicesRight"
             :key="item.title"
@@ -82,10 +82,14 @@
   background-image: url('../assets/images/hero-animated/slider01.jpeg')
   background-position: center 
   background-size: cover
-  padding: 3rem
+  @include laptop
+    padding: 3rem
 
   .services-wrap
     z-index: 2
+    padding: 3rem 0
+    @include laptop
+      padding: 0
   .services-left
     text-align: right
     flex-direction: row-reverse

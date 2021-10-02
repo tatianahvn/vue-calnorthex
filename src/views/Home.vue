@@ -30,6 +30,27 @@ export default {
     MainLastJobs,
     MainGallery,
     BannerWeLove
+  },
+  mounted(){
+    let redirectMode = this.$store.state.redirectMode 
+
+    if(redirectMode.scrollingActive){
+        document.getElementById(`${redirectMode.sectionID}`).scrollIntoView({ behavior: 'smooth'})
+    }
+  },
+  methods: {
+    goToSection(elID){
+			if(elID == 'home'){
+				this.goHome()
+			}else{
+				if(this.isHome){
+					document.getElementById(`${elID}`).scrollIntoView({ behavior: 'smooth'})
+				}else{
+					this.goHome()
+					document.getElementById(`${elID}`).scrollIntoView({ behavior: 'smooth'})
+				}	
+			}
+		},
   }
 }
 </script>

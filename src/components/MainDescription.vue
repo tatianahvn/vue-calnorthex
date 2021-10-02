@@ -1,5 +1,5 @@
 <template>
-  <section class="main-description container my-10">
+  <section class="main-description container my-md-10">
     <div class="main-description-wrap d-flex flex-column flex-md-row">
       <v-col class="main-info" pa="0">
 		<p class="info-title">
@@ -8,13 +8,10 @@
         <p>
 			The heartbeat of our company is always in people, whether it’s our customers or employees. We strive to improve and exceed expectations. We know your site schedules are critical therefore you can count on us to supply and install your underfloor heating system on time, within budget and with our outstanding service. We’ve always been ambitious and we want to grow profitably to be market leader, but, our way – with enthusiastic happy customers and as an honest, family-friendly employer.
         </p>
-		<p>
-			It’s simple, we thrive together with our customers, suppliers and staff in the most respectful, helpful and transparent way.
-		</p>
-				<div class="squares">
-					<div class="square-red"></div>
-					<div class="square-gray"></div>
-				</div>
+		<div class="squares" v-show="windowSize.x > 960 ? true : false">
+			<div class="square-red"></div>
+			<div class="square-gray"></div>
+		</div>
       </v-col >
       <v-col class="complement pa-0">
 				<div class="bg-portrait"></div>
@@ -25,7 +22,20 @@
 
 <script>
 export default {
-
+	data:() => ({
+		windowSize: {
+			x: 0,
+			y: 0
+		}
+	}),
+	mounted(){
+		this.onResize()
+	},
+	methods: {
+		onResize(){
+			this.windowSize = { x: window.innerWidth, y: window.innerHeight }
+		}
+	}
 }
 </script>
 
@@ -40,23 +50,31 @@ export default {
 		font-size: 1.2rem
 		color: $soft-black
 		text-align: center
-		min-height: 650px 
+		min-height: 580px 
 		@include laptop 
 			min-height: 300px 
 			text-align: left
+			min-height: 650px 
 
 		.info-title 
 			font-family: $font-title
 			letter-spacing: .18rem
 			text-transform: uppercase
-			line-height: 1.8rem
-			font-size: 1.5rem
+			line-height: 2.5rem
+			font-size: 2rem
 			font-weight: 600
 			color: $base-red
+			text-align: center
+			@include laptop
+				text-align: left
+				font-size: 1.5rem
 		
 		p 
 			line-height: 2rem
 			color: #666
+			text-align: justify
+			@include laptop
+				text-align: left
 
 	.complement  
 		position: relative

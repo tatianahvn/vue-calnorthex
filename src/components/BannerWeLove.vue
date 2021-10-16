@@ -39,8 +39,6 @@
   background-color: #232323
   padding: 4rem 0
 
-  .container 
-
   .title-component 
     font-size: 1.8rem 
     color: white

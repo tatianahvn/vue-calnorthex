@@ -1,17 +1,17 @@
 <template>
   <div class="container--fluid pageLatestJobs mt-15">
-    <div class="latestJobs-wrap container">
+    <div class="latestJobs-wrap">
       <v-row no-gutters class="first-section">
         <v-col cols="5">
             <v-img class="latestJob-photo" :src="require(`@/assets/images/gallery/${detailsJob.image}`)"></v-img>
         </v-col>
-        <v-col cols="7" class="main-description pa-8">
+        <v-col cols="7" class="main-description pa-8 mt-15">
           <h1 class="font-title title-component text-center">{{detailsJob.title}}</h1>
           <p class="pt-8">{{ detailsJob.fullDescription[0].textContent }}</p>
         </v-col>
       </v-row>
       <v-row class="second-section" no-gutters>
-        <v-col class="py-8">
+        <v-col class="py-15">
           <h1 class="font-title title-component text-center">Our method</h1>
           <p class="pt-8 second-pagraph">{{ detailsJob.fullDescription[1].textContent }}</p>
         </v-col>
@@ -41,6 +41,9 @@ export default {
     detailsJob(){
         return this.$store.state.detailsJob
     },
+  },
+  mounted(){
+    window.scrollTo(0, 0)
   }
 }
 </script>

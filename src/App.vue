@@ -39,9 +39,9 @@ export default {
       title: 'Qué ver',
       items: [
           /*{ title: 'Home', id: 'home', type: 'url' },*/
-          { title: 'Gallery', id: 'section-gallery', type: 'scroll' },
           { title: 'Services', id: 'section-services', type: 'scroll' },
-					/*{ title: 'About us', id: 'about', type: 'url' },*/
+          { title: 'Gallery', id: 'section-gallery', type: 'scroll' },
+					{ title: 'Projects', id: 'jobs', type: 'url' },
 					{ title: 'Contact', id: 'contact', type: 'url'}
       ],
       windowSize: {

@@ -40,6 +40,9 @@ export default {
     detailsJob(){
         return this.$store.state.detailsJob
     },
+  },
+  mounted(){
+    window.scrollTo(0, 0)
   }
 }
 </script>

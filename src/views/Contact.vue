@@ -1,5 +1,5 @@
 <template>
-  <div class="container--fluid pageContact">
+  <div class="container--fluid pageContact mt-15">
     <div class="page-wrap">
       <v-row no-gutters class="first-section">
         <v-col cols="6">

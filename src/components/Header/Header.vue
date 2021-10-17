@@ -1,6 +1,5 @@
 <template>
 	<v-app-bar v-resize="onResize"
-		:height='windowSize.x < 960 ? mobileHeight : navHeight'
 		class="app-nav"
 		color="#fff"
 		elevate-on-scroll 
@@ -185,18 +184,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.v-app-bar--is-scrolled
-	background-color: red 
-	z-index: 99
-.v-toolbar__content
-	padding: 0
-
 .app-nav::v-deep
 	.v-toolbar__content
 		padding: 0
-.v-app-bar.v-app-bar--is-scrolled
-	background-color:red 
-	z-index: 99
 
 .main-title
 	padding-top: 8px
@@ -209,18 +199,18 @@ export default {
 	flex-direction: row 
 	justify-content: center 
 	align-content: center
-	height: 100%
+	transition: all 5s ease-out
+
 	.wrap-identity 
 		display: flex 
 		justify-content: flex-start
 		align-content: center
-		height: 100%
 	.wrap-menu
 		display: flex 
 		justify-content: space-evenly
 		align-content: center 
-		height: 100% 
 		font-size: 1.5rem
+		height: 100%
 	&:before 
 		content: ''
 		width: 100% 
@@ -236,12 +226,22 @@ export default {
 			width: 240px
 
 .main-nav.scrolled
+	animation: reduce 1s ease-in-out forwards
+
 	&:before 
-		height: 2px 
+		height: 1px 
+
 	.lg-calnorthex
 		@include laptop
-			width: 150px
-	
+			animation: imageResize 1s ease-in-out forwards
+
+	.v-list-item__title
+		animation: fontSize 1s linear forwards
+
+.app-nav::v-deep
+	height: fit-content!important
+	.v-toolbar__content
+		height: 100%!important
 
 .menu
 	.v-list
@@ -265,12 +265,14 @@ export default {
 			text-align: center
 			height: 100%
 			color: $base-gray
+
 	.menu-item.active 
 		color: $base-red
 	
 	.v-list-item__title
 		font-size: 1rem
 		font-weight: 500
+		
 
 .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)
 	color: $soft-black !important
@@ -279,5 +281,30 @@ export default {
 
 .theme--light.v-btn.v-btn--icon
 	color: $base-gray
+
+
+// Animations
+@keyframes reduce 
+	0% 
+		height: 85px 
+		
+	100% 
+		height: 45px
+		opacity: .8
+		font-size: .5rem
+
+@keyframes imageResize
+	0%
+		width: 240px
+	100%
+		width: 130px
+
+@keyframes fontSize 
+	0%
+		font-size: 1rem 
+		font-weight: 500
+	100% 
+		font-size: .85rem
+		font-weight: 400
 
 </style>

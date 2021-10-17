@@ -1,5 +1,5 @@
 <template>
-  <div class="container--fluid pageLatestJobs">
+  <div class="container--fluid pageLatestJobs mt-15">
     <div class="latestJobs-wrap container">
       <v-row no-gutters class="first-section">
         <v-col cols="5">

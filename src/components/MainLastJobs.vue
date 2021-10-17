@@ -1,5 +1,5 @@
 <template>
-  <div class="container--fluid latestJobs">
+  <div class="container--fluid latestJobs mt-15">
     <div class="latestJobs-wrap container">
       <div class="d-flex flex-column my-10 justify-center align-center">
         <p class="header-min pb-0">OUT PORTFOLIO</p>

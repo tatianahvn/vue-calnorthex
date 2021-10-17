@@ -89,7 +89,7 @@ export default {
 			background: url('../assets/images/C1.jpg')
 			background-size: cover 
 			background-position: center
-			z-index: 9
+			z-index: 1
 			@include laptop
 				width: calc(100% - 20px)
 				height: calc(100% - 15px)

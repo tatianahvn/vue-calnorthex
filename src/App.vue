@@ -37,7 +37,6 @@ export default {
       right: true,
       activeSidebar: false,
       title: 'Qué ver',
-      //logoCinepolis: require('~/assets/images/lg-cinepolis-new.png'),
       items: [
           /*{ title: 'Home', id: 'home', type: 'url' },*/
           { title: 'Gallery', id: 'section-gallery', type: 'scroll' },

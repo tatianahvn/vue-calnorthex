@@ -1,5 +1,5 @@
 <template>
-	<section class="main-banner" id="home">
+	<section class="main-banner mt-16" id="home">
 		<div class="filter-layout"></div>
 		<div class="info-banner">
 			<div class="info-logo">

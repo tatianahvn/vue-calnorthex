@@ -1,63 +1,63 @@
 <template>
 	<v-app-bar v-resize="onResize"
-		:height="windowSize.x < 960 ? '80px' : '85px'"
-		:max-height="windowSize.x < 960 ? '80px' : '85px'"
+		:height='windowSize.x < 960 ? mobileHeight : navHeight'
 		class="app-nav"
-		clipped-right
 		color="#fff"
-		dense
+		elevate-on-scroll 
+		fixed 
+		app 
     >
-	<v-container fluid class="pa-0">
-        <div class="main-nav">
-			<v-col class="pa-0">
-				<v-row class="wrap-identity">
-					<router-link to="/">
-						<figure class="lg-calnorthex">
-							<img src="@/assets/images/img-lg-calnorthex.png"/>
-						</figure>
-					</router-link>
-					<p class="main-title mb-0">Calnorthex Concrete</p>
-					<v-spacer v-if="isMobile"></v-spacer>
-					<v-btn v-if="isMobile"
-						@click.stop="showSidebar()"
-						icon
+		<v-container fluid class="pa-0">
+			<div :class="scrolled ? 'main-nav scrolled': 'main-nav'">
+				<v-col class="pa-0">
+					<v-row class="wrap-identity">
+						<router-link to="/">
+							<figure class="lg-calnorthex">
+								<img src="@/assets/images/img-lg-calnorthex.png"/>
+							</figure>
+						</router-link>
+						<p class="main-title mb-0">Calnorthex Concrete</p>
+						<v-spacer v-if="isMobile"></v-spacer>
+						<v-btn v-if="isMobile"
+							@click.stop="showSidebar()"
+							icon
+						>
+							<v-icon>mdi-menu</v-icon>
+						</v-btn>
+					</v-row>
+				</v-col>
+			<v-col v-if="!isMobile" class="pa-0">
+							<v-row class="wrap-menu menu">
+				<v-list text>
+					<v-list-item-group 
+						v-model="menuSelection"
+						active-class="active"
 					>
-						<v-icon>mdi-menu</v-icon>
-					</v-btn>
-				</v-row>
-			</v-col>
-		<v-col v-if="!isMobile" class="pa-0">
-            <v-row class="wrap-menu menu">
-			<v-list text>
-				<v-list-item-group 
-					v-model="menuSelection"
-					active-class="active"
-				>
-					<v-list-item 
-						link
-						class="menu-item item-home"
-						@click="this.goHome"
-					>
-						<v-list-item-title>Home</v-list-item-title>
-					</v-list-item>
-					<v-list-item 
-						v-for="(item, index) in navItems"
-						:key="item.title"
-						link
-						:class="`menu-item item-${index}`"
-						:id="`item-${index}`"
-						:ref="`item-${index}`"
-						@click="redirect(item.type, item.id)"
-					>
-						<v-list-item-title>{{item.title}}</v-list-item-title>
-					</v-list-item>
-				</v-list-item-group>
-				</v-list>
-            </v-row>
-			</v-col>
-		</div>
-		</v-container>
-    </v-app-bar>
+						<v-list-item 
+							link
+							class="menu-item item-home"
+							@click="this.goHome"
+						>
+							<v-list-item-title>Home</v-list-item-title>
+						</v-list-item>
+						<v-list-item 
+							v-for="(item, index) in navItems"
+							:key="item.title"
+							link
+							:class="`menu-item item-${index}`"
+							:id="`item-${index}`"
+							:ref="`item-${index}`"
+							@click="redirect(item.type, item.id)"
+						>
+							<v-list-item-title>{{item.title}}</v-list-item-title>
+						</v-list-item>
+					</v-list-item-group>
+					</v-list>
+							</v-row>
+				</v-col>
+			</div>
+			</v-container>
+	</v-app-bar>
 </template>
 
 <script>
@@ -72,12 +72,16 @@ export default {
     }
 	},
 	data:()=>({
+		active: false,
 		drawer: false,
 		fixed: false,
 		miniVariant: false,
 		right: true,
 		activeSidebar: false,
 		menuSelection: 0,
+		mobileHeight: 80,
+		deskHeight: 85,
+		scrolled: false,
 		windowSize:{
 			x: 0,
 			y: 0
@@ -90,7 +94,19 @@ export default {
 	mounted(){
 		this.onResize()
 	},
+	created () {
+		window.addEventListener('scroll', this.handleScroll);
+	},
+	destroyed () {
+		window.removeEventListener('scroll', this.handleScroll);
+	},
 	computed: {
+		navHeight(){
+			if(this.scrolled)
+				return 50
+			else 
+				return 85
+		},
 		isHome(){
 			if(this.$route.path == '/'){
 				return true
@@ -107,6 +123,14 @@ export default {
 		}
 	},
 	methods:{
+		toggleNavClass(){
+        if(this.active == false){
+          return 'nav'
+        } else {
+          return 'sticky-nav'
+        }
+    },
+
 		redirect(type, value){
 			if(type == 'scroll'){
 				let data = {
@@ -149,19 +173,37 @@ export default {
 		showSidebar(){
 			this.activeSidebar = !this.activeSidebar
 			this.$emit('handlerSidebar', this.activeSidebar)
+		},
+		handleScroll(){
+			// Check if the scroll of window is bigger that height of header for custom styles in app-bar
+			this.scrolled = window.scrollY > this.deskHeight;
 		}
+	
 	}
 
 }
 </script>
 
 <style lang="sass" scoped>
-.app-nav
+.v-app-bar--is-scrolled
+	background-color: red 
+	z-index: 99
+.v-toolbar__content
+	padding: 0
+
+.app-nav::v-deep
+	.v-toolbar__content
+		padding: 0
+.v-app-bar.v-app-bar--is-scrolled
+	background-color:red 
+	z-index: 99
+
 .main-title
 	padding-top: 8px
 	color: white
 	font-size: 2rem
 	display: none
+
 .main-nav 
 	display: flex 
 	flex-direction: row 
@@ -187,6 +229,19 @@ export default {
 		left: 0
 		bottom: 0
 		background: linear-gradient(90deg, $base-gray 0, $base-red)
+
+	.lg-calnorthex
+		width: 230px
+		@include laptop
+			width: 240px
+
+.main-nav.scrolled
+	&:before 
+		height: 2px 
+	.lg-calnorthex
+		@include laptop
+			width: 150px
+	
 
 .menu
 	.v-list
@@ -225,8 +280,4 @@ export default {
 .theme--light.v-btn.v-btn--icon
 	color: $base-gray
 
-.lg-calnorthex
-	width: 230px
-	@include laptop
-		width: 240px
 </style>

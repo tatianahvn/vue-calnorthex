@@ -70,10 +70,14 @@ export default {
 
 <style lang="sass" scoped>
   .redCard-photo
-    height: 100%
-    transition: all .3s
+    height: 50vh
+    @include laptop
+      height: 100%
+      transition: all .3s
+    
   .redCard-card
     height: 380px
+    width: 100%
     &:hover::before
       content: ''
       position: absolute 

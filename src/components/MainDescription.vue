@@ -1,23 +1,25 @@
 <template>
-  <section class="main-description container my-md-10">
-    <div class="main-description-wrap d-flex flex-column flex-md-row">
-      <v-col class="main-info" pa="0">
-		<p class="info-title">
-			YOUR PROJECT SUCCESS IS OUR BUSINESS
-		</p>
-        <p>
-			The heartbeat of our company is always in people, whether it’s our customers or employees. We strive to improve and exceed expectations. We know your site schedules are critical therefore you can count on us to supply and install your underfloor heating system on time, within budget and with our outstanding service. We’ve always been ambitious and we want to grow profitably to be market leader, but, our way – with enthusiastic happy customers and as an honest, family-friendly employer.
-        </p>
-		<div class="squares" v-show="windowSize.x > 960 ? true : false">
-			<div class="square-red"></div>
-			<div class="square-gray"></div>
+	<section class="main-description container my-md-10">
+		<div class="main-description-wrap d-flex flex-column flex-md-row">
+			<v-col class="main-info pa-sm-5 pa-md-8">
+				<p class="info-title py-5">
+					YOUR PROJECT SUCCESS IS OUR BUSINESS
+				</p>
+				<p>
+					The heartbeat of our company is always in people, whether it’s our customers or employees. 
+					We strive to improve and exceed expectations. We know your site schedules are critical therefore you can count on us to supply and install your underfloor heating system on time, 
+					within budget and with our outstanding service.
+				</p>
+				<div class="squares" v-show="windowSize.x > 960 ? true : false">
+					<div class="square-red"></div>
+					<div class="square-gray"></div>
+				</div>
+			</v-col >
+			<v-col class="complement pa-0">
+					<div class="bg-portrait"></div>
+			</v-col>
 		</div>
-      </v-col >
-      <v-col class="complement pa-0">
-				<div class="bg-portrait"></div>
-      </v-col>
-    </div>
-  </section>
+	</section>
 </template>
 
 <script>
@@ -45,13 +47,12 @@ export default {
 	height: auto
 	.main-info
 		width: 100%
-		padding: 1rem
+		padding: 2rem
 		height: 100% 
-		font-size: 1.2rem
-		color: $soft-black
+		font-size: 1.5rem
 		text-align: center
-		min-height: 580px 
 		@include laptop 
+			padding: 1rem
 			min-height: 300px 
 			text-align: left
 			min-height: 650px 
@@ -60,19 +61,19 @@ export default {
 			font-family: $font-title
 			letter-spacing: .18rem
 			text-transform: uppercase
-			line-height: 2.5rem
+			line-height: 2rem
 			font-size: 2rem
 			font-weight: 600
 			color: $base-red
 			text-align: center
 			@include laptop
 				text-align: left
-				font-size: 1.5rem
+				line-height: 2rem
 		
 		p 
-			line-height: 2rem
-			color: #666
+			line-height: 2.5rem
 			text-align: justify
+			color: $common-black
 			@include laptop
 				text-align: left
 
@@ -80,11 +81,13 @@ export default {
 		position: relative
 		width: 100%
 		padding: 1rem
-		min-height: 550px 
+		min-height: 45vh
+		@include laptop
+			min-height: 550px 
 		.bg-portrait
 			position: relative
 			width: 100%
-			height: 75vh
+			height: 45vh
 			margin: auto
 			background: url('../assets/images/C1.jpg')
 			background-size: cover 

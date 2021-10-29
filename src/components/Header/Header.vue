@@ -1,7 +1,7 @@
 <template>
 	<v-app-bar v-resize="onResize"
 		class="app-nav"
-		color="#fff"
+		:color="scrolled ? 'rgba(255, 255, 255, 0.95)' : 'white'"
 		elevate-on-scroll 
 		fixed 
 		app 

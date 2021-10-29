@@ -17,6 +17,7 @@ import MainDescription from '@/components/MainDescription'
 import MainServices from '@/components/MainServices'
 import MainGallery from '@/components/MainGallery'
 import MainLastJobs from '@/components/MainLastJobs'
+import MainSliderProjects from '@/components/MainSliderProjects'
 import ServicesPresentation from '@/components/ServicesPresentation'
 import BannerWeLove from '@/components/BannerWeLove'
 
@@ -28,6 +29,7 @@ export default {
     MainServices,
     ServicesPresentation,
     MainLastJobs,
+    MainSliderProjects,
     MainGallery,
     BannerWeLove
   },

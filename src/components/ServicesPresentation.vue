@@ -5,7 +5,8 @@
         <h1 class="font-title title-component"> WE OFFER A WIDE RANGE OF SERVICES</h1>
       </v-row>
       <p>
-        From conception to completion, our entire team of estimators, designers, project managers and experienced executives make our clients’ needs a priority. We have experience in a wide variety of projects and delivery methods, and use both time-proven practices and cutting-edge techniques to make sure our customers’ projects meet their maximum potential.
+        We have experience in a wide variety of projects and delivery methods, and use both time-proven practices and cutting-edge techniques to make sure our customers’ 
+        projects meet their maximum potential.
       </p>
       <v-btn
         large
@@ -31,29 +32,36 @@
 <style lang="sass" scoped>
 .presentation-services 
   position: relative
-  background-color: #dcdcdc
-  padding: 4rem 0 5rem
+  background-color: $soft-white
+  padding: 2rem
+  @include laptop
+    padding: 4rem 0 5rem
 
   .container 
     text-align: center
 
   .title-component 
-    font-size: 1.8rem 
-    color: #464646
+    font-size: 1.5rem
+    letter-spacing: 0.18rem
+    text-transform: uppercase
+    line-height: 2rem
+    color: $common-black
     text-align: center
-    z-index: 2
-    letter-spacing: 5px
+    z-index: 1
     margin: 2rem auto
+    @include laptop
+      font-size: 2rem 
   
   p 
-    text-align: center
-    width: 80% 
+    width: 100% 
     margin: auto
-    color: #464646
+    color: $common-black
     font-size: 1.4rem
+    text-align: justify
     @include laptop 
       width: 65% 
-      font-size: 1.2rem
+      font-size: 1.5rem
+      text-align: center
 
 
 </style>

@@ -1,6 +1,6 @@
 <template>
   <v-card 
-    class="photo-card rounded-0"
+    class="photo-card rounded-3 elevation-0 ma-3"
     @mouseenter="activeCard = true"
     @mouseleave="activeCard = false"
   >
@@ -39,6 +39,7 @@ export default {
   .photo-card
     position: relative
     cursor: default
+    box-shadow: 2px 4px 12px rgba(0,0,0,.4)!important
     .layout
       position: absolute 
       top: 0

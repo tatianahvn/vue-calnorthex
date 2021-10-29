@@ -91,13 +91,23 @@
     @include laptop
       padding: 0
   .services-left
-    text-align: right
-    flex-direction: row-reverse
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    @include laptop
+      flex-direction: row-reverse
+      text-align: right
   .services-right
-    text-align: left
-    flex-direction: row
+    flex-direction: column
+    text-align: center
+    justify-content: center
+    align-items: center
+    @include laptop
+      flex-direction: row
+      text-align: left
   .title-component 
-    font-size: 1.8rem 
+    font-size: 2rem 
     color: white
     text-align: center
     z-index: 2
@@ -129,7 +139,7 @@
       text-transform: uppercase
       color: white
       margin-bottom: 5px
-      font-size: 1.2rem
+      font-size: 1.4rem
       //width: 50%
       //max-width: 170px
       //margin: auto

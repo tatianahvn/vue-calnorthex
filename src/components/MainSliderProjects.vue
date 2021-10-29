@@ -1,36 +1,54 @@
 <template>
-  <div class="container--fluid latestJobs mt-15" v-resize="onResize">
-    <div class="latestJobs-wrap container">
+  <section class="container--fluid projects mt-15" v-resize="onResize">
+    <div class="projects container">
       <div class="d-flex flex-column my-10 justify-center align-center">
         <p class="header-min pb-0">OUT PORTFOLIO</p>
         <p class="font-title header-title">PROJECTS</p>
         <p class="p-info">Since 1989, Sweenor Builders has built beautiful legacy homes in coastal Rhode Island. <br>Our portfolio features collaborations with Southern New England’s leading architects<br> and a range of in-house design/build and interior design services.</p>
       </div>
-      <v-row v-if="windowSize.x < 960" no-gutters>
-        <v-col 
-          cols="12"
-          v-for="(job, index) in latestJobs"
-          :key="index"
-          class="mb-3"
+      <div class="slider-projects">
+        <swiper
+          :slides-per-view="3"
+          :space-between="50"
+          @swiper="onSwiper"
+          @slideChange="onSlideChange"
         >
-          <RedCardAnimated :info="job"/>
-        </v-col>
-      </v-row>
-      <v-row v-else>
-        <v-col cols="3" 
-          v-for="(job, index) in latestJobs"
-          :key="index"
-        >
-          <RedCardAnimated :info="job"/>
-        </v-col>
-      </v-row>
+          <swiper-slide>Slide 1</swiper-slide>
+          <swiper-slide>Slide 2</swiper-slide>
+          <swiper-slide>Slide 3</swiper-slide>
+        </swiper>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import RedCardAnimated from '@/components/Cards/red-card-animated'
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
 
+  // Import Swiper styles
+  import 'swiper/scss';
+
+  export default {
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
+    setup() {
+      const onSwiper = (swiper) => {
+        console.log(swiper)
+      }
+      const onSlideChange = () => {
+        console.log('slide change')
+      }
+      return {
+        onSwiper,
+        onSlideChange,
+      }
+    },
+  };
+
+/*
 export default {
   components: {
     RedCardAnimated
@@ -108,11 +126,12 @@ export default {
 			this.windowSize = { x: window.innerWidth, y: window.innerHeight }
 		},
   },
-
 }
+*/
+
 </script>
 <style lang="sass" scoped>
-  .latestJobs
+  .projects
     max-width: 100%
     padding: 0 20px
     @include laptop

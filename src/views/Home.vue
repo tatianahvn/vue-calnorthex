@@ -5,6 +5,7 @@
     <ServicesPresentation/>
     <MainServices/>
     <MainLastJobs/>
+    <MainSliderProjects/>
     <BannerWeLove/>
     <MainGallery/>
   </div>

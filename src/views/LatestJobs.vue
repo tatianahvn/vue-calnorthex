@@ -24,18 +24,18 @@
           <v-img aspect-ratio="1" class="fase-pictures" :src="require(`@/assets/images/gallery/${picture.src}`)"></v-img>
         </v-col>
       </v-row>
-      <MainLastJobs/>
+      <MainSliderProjects/>
     </div>
   </div>
 </template>
 
 <script> 
-import MainLastJobs from '@/components/MainLastJobs'
+import MainSliderProjects from '@/components/MainSliderProjects'
 
 export default {
   name: 'LatestJobs',
   components: {
-    MainLastJobs
+    MainSliderProjects
   },
   computed: {
     detailsJob(){

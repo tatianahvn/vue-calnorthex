@@ -6,7 +6,7 @@
       </div>
       <v-row>
         <v-col 
-          cols="4"
+          :cols="windowSize.x < 960 ? '12' : '4'"
           v-for="(item, index) in galleryItems"
           :key="index"
         >
@@ -18,29 +18,43 @@
 </template>
 
 <script>
+
 import GalleryCard from './Cards/gallery-card.vue'
 export default {
   components: { GalleryCard },
 
-  data(){
-    return{
-      galleryItems: [
-        { title: 'Driveway', location: 'Coronado, CA', src: 'C8.jpg' }, 
-        { title: 'Driveway', location: 'Coronado, CA', src: 'A1.jpg' }, 
-        { title: 'Driveway', location: 'Coronado, CA', src: 'E3.jpg' }, 
+  mounted(){
+    this.onResize()
+  },
 
-        { title: 'Driveway', location: 'Coronado, CA', src: 'G5.jpg' }, 
-        { title: 'Driveway', location: 'Coronado, CA', src: 'G6.jpg' }, 
-        { title: 'Driveway', location: 'Coronado, CA', src: 'H12.jpg' }, 
+  data:() =>  ({
+    galleryItems: [
+      { title: 'Driveway', location: 'Coronado, CA', src: 'C8.jpg' }, 
+      { title: 'Driveway', location: 'Coronado, CA', src: 'A1.jpg' }, 
+      { title: 'Driveway', location: 'Coronado, CA', src: 'E3.jpg' }, 
 
-        { title: 'Driveway', location: 'Coronado, CA', src: 'D1.jpg' }, 
-        { title: 'Driveway', location: 'Coronado, CA', src: 'B2.jpg' }, 
-        { title: 'Driveway', location: 'Coronado, CA', src: 'B3.jpg' }, 
-      ]
+      { title: 'Driveway', location: 'Coronado, CA', src: 'G5.jpg' }, 
+      { title: 'Driveway', location: 'Coronado, CA', src: 'G6.jpg' }, 
+      { title: 'Driveway', location: 'Coronado, CA', src: 'H12.jpg' }, 
+
+      { title: 'Driveway', location: 'Coronado, CA', src: 'D1.jpg' }, 
+      { title: 'Driveway', location: 'Coronado, CA', src: 'B2.jpg' }, 
+      { title: 'Driveway', location: 'Coronado, CA', src: 'B3.jpg' }, 
+    ],
+
+    windowSize: {
+      x: 0,
+      y: 0
     }
-  }
-
+  }),
+    
+  methods: {
+		onResize(){
+			this.windowSize = { x: window.innerWidth, y: window.innerHeight }
+		}
+	}
 }
+
 </script>
 
 <style lang="sass" scoped>

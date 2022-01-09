@@ -12,6 +12,7 @@
         large
         outlined
         class="mt-8"
+        to="/contact"
         
       >
         CONTACT US FOR A PROJECT QUOTE

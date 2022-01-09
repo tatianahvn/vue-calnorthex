@@ -51,6 +51,7 @@ export default {
 		height: 100% 
 		font-size: 1.5rem
 		text-align: center
+		min-height: fit-content
 		@include laptop 
 			padding: 1rem
 			min-height: 300px 

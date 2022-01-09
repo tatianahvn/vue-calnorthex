@@ -9,7 +9,7 @@
 		<v-container fluid class="pa-0">
 			<div :class="scrolled ? 'main-nav scrolled': 'main-nav'">
 				<v-col class="pa-0">
-					<v-row class="wrap-identity">
+					<div class="d-flex flex-row justify-center align-center">
 						<router-link to="/">
 							<figure class="lg-calnorthex">
 								<img src="@/assets/images/img-lg-calnorthex.png"/>
@@ -20,13 +20,14 @@
 						<v-btn v-if="isMobile"
 							@click.stop="showSidebar()"
 							icon
+							:style="scrolled ? 'margin-top: -10px': ''"
 						>
 							<v-icon>mdi-menu</v-icon>
 						</v-btn>
-					</v-row>
+					</div>
 				</v-col>
 			<v-col v-if="!isMobile" class="pa-0">
-							<v-row class="wrap-menu menu">
+				<v-row class="wrap-menu menu">
 				<v-list text>
 					<v-list-item-group 
 						v-model="menuSelection"
@@ -53,7 +54,7 @@
 					</v-list-item-group>
 					</v-list>
 							</v-row>
-				</v-col>
+			</v-col>
 			</div>
 			</v-container>
 	</v-app-bar>
@@ -65,9 +66,9 @@ export default {
 	name: 'Header',
 	props: {
     navItems: {
-			type: Array,
-			default: () => [],
-			require: false
+		type: Array,
+		default: () => [],
+		require: false
     }
 	},
 	data:()=>({
@@ -201,10 +202,6 @@ export default {
 	align-content: center
 	transition: all 5s ease-out
 
-	.wrap-identity 
-		display: flex 
-		justify-content: flex-start
-		align-content: center
 	.wrap-menu
 		display: flex 
 		justify-content: space-evenly
@@ -232,8 +229,8 @@ export default {
 		height: 1px 
 
 	.lg-calnorthex
-		@include laptop
-			animation: imageResize 1s ease-in-out forwards
+		padding-top: 2px
+		animation: imageResize 1s ease-in-out forwards
 
 	.v-list-item__title
 		animation: fontSize 1s linear forwards

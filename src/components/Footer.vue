@@ -128,10 +128,11 @@ export default {
 .footer-wrap
 	width: 100%
 	display: flex 
-	height: 80%
+	height: fit-content
 	flex-direction: column 
 	background-color: $dark-black!important
 	color: white
+	padding-bottom: 20px
 	@include laptop 
 		flex-direction: row 
 

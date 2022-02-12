@@ -1,30 +1,30 @@
 <template>
   <div class="container--fluid pageLatestJobs mt-15">
     <div class="latestJobs-wrap">
-      <v-row no-gutters class="first-section">
-        <v-col cols="5">
+      <div class="first-section">
+        <v-col cols="12" md="5" class="pa-0">
             <v-img class="latestJob-photo" :src="require(`@/assets/images/gallery/${detailsJob.image}`)"></v-img>
         </v-col>
-        <v-col cols="7" class="main-description pa-8 mt-15">
-          <h1 class="font-title title-component text-center">{{detailsJob.title}}</h1>
-          <p class="pt-8">{{ detailsJob.fullDescription[0].textContent }}</p>
+        <v-col cols="12" md="7" class="main-description pa-8">
+          <h1 class="font-title title-component text-center pt-5 pt-md-15">{{detailsJob.title}}</h1>
+          <p class="description-component">{{ detailsJob.fullDescription[0].textContent }}</p>
         </v-col>
-      </v-row>
-      <v-row class="second-section" no-gutters>
+      </div>
+      <div class="second-section">
         <v-col class="py-15">
           <h1 class="font-title title-component text-center">Our method</h1>
           <p class="pt-8 second-pagraph">{{ detailsJob.fullDescription[1].textContent }}</p>
         </v-col>
-      </v-row>
-      <v-row class="pictures-section" no-gutters>
-        <v-col cols="4"
+      </div>
+      <div class="pictures-section">
+        <v-col cols="12" md="4"
           v-for="(picture, index) in detailsJob.pictures"
           :key="index"
         >
           <v-img aspect-ratio="1" class="fase-pictures" :src="require(`@/assets/images/gallery/${picture.src}`)"></v-img>
         </v-col>
-      </v-row>
-      <MainSliderProjects/>
+      </div>
+      <MainSliderProjects class="mb-10 mb-md-auto"/>
     </div>
   </div>
 </template>
@@ -55,10 +55,20 @@ export default {
     text-transform: uppercase
     letter-spacing: 10px
     color: $dark-gray
+  .description-component
+    width: 85%  
+    padding-top: 30px
   .latestJob-photo
-    height: 87vh
-    max-height: 750px
+    height: 70vh
+    max-height: 500px
+    @include laptop
+      height: 87vh
+      max-height: 750px
   .main-description
+    display: flex 
+    flex-direction: column 
+    justify-content: center 
+    align-items: center
     background-color: #f9f9f9
   p
     font-size: 1.2rem

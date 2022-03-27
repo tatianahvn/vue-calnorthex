@@ -75,6 +75,7 @@ export default {
     text-align: center
   a 
     text-decoration: none
+    color: $base-red
   .txt-center
     text-align: center
   .txt-bold

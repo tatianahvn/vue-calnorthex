@@ -1,5 +1,5 @@
 <template>
-	<section class="main-banner mt-16" id="home">
+	<section class="main-banner mt-16" id="section-main">
 		<div class="filter-layout"></div>
 		<div class="info-banner">
 			<div class="info-logo">
@@ -69,13 +69,13 @@ export default {
 
 		p 
 			color: #fff
-			line-height: 1.2
+			line-height: 1.2rem
 			margin-bottom: 40px
-			font-size: 1.3rem
+			font-size: 1.2rem
 			font-weight: 400
 			text-align: center
 			@include laptop 
-				font-size: 1.3rem
+				font-size: 1.5rem
 				text-align: center
 
 		a 

@@ -5,7 +5,6 @@ import About from '../views/About'
 import Jobs from '../views/LatestJobs'
 import Contact from '../views/Contact'
 
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,8 +31,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes,
-  mode: 'history'
+  mode: "history",
+  routes
 })
 
 export default router

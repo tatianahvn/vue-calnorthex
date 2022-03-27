@@ -1,5 +1,5 @@
 <template>
-  <section class="container--fluid projects mt-15" v-resize="onResize">
+  <section class="container--fluid projects mt-15">
     <div class="projects container">
       <div class="d-flex flex-column my-10 justify-center align-center">
         <p class="header-min pb-0">OUT PORTFOLIO</p>
@@ -150,7 +150,11 @@ import ProjectCard from './Cards/project-card.vue'
       @include laptop
         margin-botom: 20px
     p 
-      font-size: 1.5rem
+      font-size: 1.2rem
+      line-height: 1.5rem
+      @include laptop
+        font-size: 1.5rem
+        line-height: 2rem
     .p-info
       text-align: justify
       @include laptop

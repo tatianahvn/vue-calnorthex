@@ -1,11 +1,11 @@
 <template>
-  <div class="container--fluid pageLatestJobs mt-15">
+  <div class="container--fluid pageLatestJobs">
     <div class="latestJobs-wrap">
-      <div class="first-section">
+      <div class="first-section d-flex flex-column flex-md-row">
         <v-col cols="12" md="5" class="pa-0">
             <v-img class="latestJob-photo" :src="require(`@/assets/images/gallery/${detailsJob.image}`)"></v-img>
         </v-col>
-        <v-col cols="12" md="7" class="main-description pa-8">
+        <v-col cols="12" md="5" class="main-description mx-auto pa-3 pa-md-8 my-8">
           <h1 class="font-title title-component text-center pt-5 pt-md-15">{{detailsJob.title}}</h1>
           <p class="description-component">{{ detailsJob.fullDescription[0].textContent }}</p>
         </v-col>
@@ -16,7 +16,7 @@
           <p class="pt-8 second-pagraph">{{ detailsJob.fullDescription[1].textContent }}</p>
         </v-col>
       </div>
-      <div class="pictures-section">
+      <div class="pictures-section d-flex flex-column flex-md-row">
         <v-col cols="12" md="4"
           v-for="(picture, index) in detailsJob.pictures"
           :key="index"
@@ -50,6 +50,9 @@ export default {
 
 <style lang="sass" scoped>
 .pageLatestJobs
+  margin-top: 80px
+  @include laptop
+    margin-top: 84px
   .title-component
     font-size: 2rem 
     text-transform: uppercase
@@ -74,14 +77,20 @@ export default {
     font-size: 1.2rem
     color: #666
     text-align: justify
+    @include laptop
+      font-size: 1.5rem
+      line-height: 2rem
   p.second-pagraph
     width: 80% 
     margin: auto
     text-align: center
+    color: $white-80
   .second-section
-    background-color: #e8d2d3
+    background-color: $soft-black
+    .title-component
+      color: white
   .pictures-section
-    background-color: #e8d2d3
+    background-color: $soft-black
     .fase-pictures 
       max-height: 450px
       filter: grayscale(100%) contrast(110%) brightness(90%)

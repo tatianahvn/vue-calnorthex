@@ -106,25 +106,20 @@ export default {
 
 <style lang="sass" scoped>
 .v-footer
-	position: relative
-	height: 50rem
+	display: flex
+	flex-direction: column
 	background-color: $dark-black!important
 	padding: 0
 	margin: 0
 	cursor: default
-	@include laptop 
-		height: 450px
 .footer-legal 
-	position: absolute 
-	bottom: 0
-	left: 0
 	width: 100% 
 	text-align: center 
 	height: 60px
 	background-color: $darker-black
 	color: $light-gray
-	font-size: .8rem
-	padding: 20px
+	line-height: 14px
+	padding: 20px 10px
 .footer-wrap
 	width: 100%
 	display: flex 
@@ -132,7 +127,7 @@ export default {
 	flex-direction: column 
 	background-color: $dark-black!important
 	color: white
-	padding-bottom: 20px
+	padding: 25px 0
 	@include laptop 
 		flex-direction: row 
 

@@ -42,10 +42,11 @@
 
   .title-component 
     font-size: 1.5rem
+    font-weight: 500
     letter-spacing: 0.18rem
     text-transform: uppercase
     line-height: 2rem
-    color: $common-black
+    color: $soft-black
     text-align: center
     z-index: 1
     margin: 2rem auto
@@ -56,11 +57,13 @@
     width: 100% 
     margin: auto
     color: $common-black
-    font-size: 1.4rem
+    font-size: 1.3rem
+    line-height: 1.8rem
     text-align: justify
     @include laptop 
       width: 65% 
       font-size: 1.5rem
+      line-height: 2rem
       text-align: center
 
 

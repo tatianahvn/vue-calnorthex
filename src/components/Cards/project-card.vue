@@ -22,8 +22,8 @@
 export default {
     props: {
         dataProject: {
-            type: Array,
-            default: () => [],
+            type: Object,
+            default: () => {},
             require: true
         }
     },

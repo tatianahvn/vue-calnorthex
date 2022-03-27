@@ -49,11 +49,12 @@ export default {
 		width: 100%
 		padding: 2rem
 		height: 100% 
-		font-size: 1.5rem
+		font-size: 1.3rem
 		text-align: center
 		min-height: fit-content
 		@include laptop 
 			padding: 1rem
+			font-size: 1.5rem
 			min-height: 300px 
 			text-align: left
 			min-height: 650px 
@@ -63,20 +64,22 @@ export default {
 			letter-spacing: .18rem
 			text-transform: uppercase
 			line-height: 2rem
-			font-size: 2rem
-			font-weight: 600
+			font-size: 1.5rem
+			font-weight: 500
 			color: $base-red
 			text-align: center
 			@include laptop
+				font-size: 2rem
 				text-align: left
 				line-height: 2rem
 		
 		p 
-			line-height: 2.5rem
+			line-height: 1.8rem
 			text-align: justify
 			color: $common-black
 			@include laptop
 				text-align: left
+				line-height: 2rem
 
 	.complement  
 		position: relative

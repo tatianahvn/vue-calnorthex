@@ -11,12 +11,21 @@
       <v-btn @click="hideSidebar()" :color="styleColors.baseRed" icon ><v-icon>mdi-close</v-icon></v-btn>
     </div>
       <v-list dense nav>
+		<v-list-item link>
+          <v-list-item-content>
+            <v-list-item-title @click="this.goHome">Home</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item  
           v-for="item in navItems"
           :key="item.title"
           link>
           <v-list-item-content>
-            <v-list-item-title @click="goToSection(item.id)">{{ item.title }}</v-list-item-title>
+            <v-list-item-title 
+				@click="redirect(item.type, item.id)"
+			>
+				{{ item.title }}
+			</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -26,19 +35,19 @@
 <script>
 
 export default {
-  name: 'Sidebar',
-  props: {
-    navItems: {
-			type: Array,
-			default: () => [],
-			require: false
-    },
-    showSidebar: {
-      type: Boolean,
-      default: false,
-      required: true
-    }
-  },
+	name: 'Sidebar',
+	props: {
+		navItems: {
+				type: Array,
+				default: () => [],
+				require: false
+		},
+		showSidebar: {
+			type: Boolean,
+			default: false,
+			required: true
+		}
+	},
 	computed:{
 		options() {
 			return {	
@@ -46,24 +55,71 @@ export default {
 				offset: 0, 
 				easing: 'easeInOutCubic'
 				}
-		}	
+		},
+		isHome(){
+			if(this.$route.path == '/'){
+				return true
+			}else{
+				return false
+			}
+		}
 	},
-  data(){
-    return{
-				styleColors: {
-					baseRed: '#9C171F',
-					baseGray: '#58585C'
-				},
-    }
-  },
+	data(){
+		return{
+			styleColors: {
+				baseRed: '#9C171F',
+				baseGray: '#58585C'
+			},
+		}
+	},
 	methods: {
 		hideSidebar(){
-        this.$emit('close')
-      },
-			goToSection(section){
-				this.$vuetify.goTo(section, this.options)
-				this.hideSidebar()
+			this.$emit('close')
+		},
+		goToSection(elID){
+			if(elID == 'home'){
+				this.goHome()
+			}else{
+				if(this.isHome){
+					document.getElementById(`${elID}`).scrollIntoView({ behavior: 'smooth'})
+				}else{
+					this.goHome()
+					document.getElementById(`${elID}`).scrollIntoView({ behavior: 'smooth'})
+				}	
 			}
+		},
+		goHome(){
+			this.$router.push('/')
+		},
+		redirect(type, value){
+		
+			if(type == 'scroll'){
+				let data = {
+					scrollingActive: true,
+					sectionID: value
+				}
+				this.$store.commit('setRedirectMode', data)
+
+				if(this.isHome)
+					document.getElementById(`${value}`).scrollIntoView({ behavior: 'smooth'})
+				else 
+					this.goHome()
+
+				this.hideSidebar()
+
+			}else {
+				console.log('id: ',value)
+				let data = {
+					scrollingActive: false,
+					sectionID: value
+				}
+				this.$store.commit('setRedirectMode', data)
+
+				this.$router.push({
+					path: `/${ value }`
+				})
+			}
+		}
 	}
 }
 </script>

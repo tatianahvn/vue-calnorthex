@@ -1,12 +1,12 @@
 <template>
   <div class="container--fluid pageContact mt-15">
     <div class="page-wrap">
-      <v-row no-gutters class="first-section">
-        <v-col cols="6">
+      <div class="first-section d-flex flex-column-reverse flex-md-row justify-center align-center">
+        <v-col cols="12" md="6" class="pa-0">
             <v-img class="latestJob-photo" :src="require(`@/assets/images/gallery/C2.jpg`)"></v-img>
         </v-col>
-        <v-col cols="6" class="main-description pa-8">
-          <h1 class="font-title title-component text-center">CONTACT INFO</h1>
+        <v-col cols="12" md="6" class="main-description pa-8">
+          <h1 class="font-title title-component text-center mt-5 mt-md-0">CONTACT INFO</h1>
           <div class="separator"></div>
           <p class="pt-2">Phone: (707) 490-7975 </p>
           <p>Email: <a href="mailto:calnorthex@gmail.com">calnorthex@gmail.com </a></p>
@@ -17,7 +17,7 @@
           <p class="pt-2 txt-center">Santa Rosa, CA</p>
           <div class="separator"></div>
         </v-col>
-      </v-row>
+      </div>
       <!--
       <v-row class="pictures-section" no-gutters>
         <v-col cols="4"
@@ -50,10 +50,13 @@ export default {
 <style lang="sass" scoped>
 .pageContact
   .title-component
-    font-size: 2rem 
+    font-size: 1.25rem 
+    letter-spacing: 5px
     text-transform: uppercase
-    letter-spacing: 10px
     color: $dark-gray
+    @include laptop 
+      font-size: 2rem 
+      letter-spacing: 10px
   .latestJob-photo
     height: 87vh
     max-height: 750px

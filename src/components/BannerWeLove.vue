@@ -6,8 +6,8 @@
         <div>
           <h1 class="font-title title-component mb-2"> WE LOVE WHAT WE DO...</h1>
           <p>
-            We want the journey of building your dreams to be rewarding.<br>
-            This shapes our values and the way we do business.
+            We want the journey of building your project to be pleasant. No matter how to big or small your project is. Calnorthex Concrete
+            offers you a solution and ideas to fulfill your needs.
           </p>
         </div>
         <div>
@@ -17,7 +17,7 @@
             dark
             class="my-8"
           >
-            LEAR MORE
+            FREE QUOTE
           </v-btn>
         </div>
       </div>

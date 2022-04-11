@@ -41,9 +41,9 @@
     data(){
       return{
         servicesLeft: [
+          { title: '15+ Years of Experience in Excavation ', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam nisl sit amet venenatis venenatis.', icon: 'icon-vehicle-excavator' },
           { title: 'Removal & Replace Concrete', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam nisl sit amet venenatis venenatis.', icon: 'icon-jackhammer' },
           { title: 'Slab Foundation', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam nisl sit amet venenatis venenatis.', icon: 'icon-architecture' },
-          { title: '10+ Years of Experience in Excavation ', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam nisl sit amet venenatis venenatis.', icon: 'icon-vehicle-excavator' },
         ],
         servicesRight : [
           { title: 'Driveways & Walkways', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam nisl sit amet venenatis venenatis.', icon: 'icon-trowel' },

@@ -19,7 +19,7 @@ export default {
 		return {
 			title: 'YOU DREAM IT & WE BUILD IT',
 			description: 'Our Team Specialize in Design and Build Concrete Solutions',
-			ctaBtn: 'Show more',
+			ctaBtn: 'Free Estimates',
 		}
 	},
 }

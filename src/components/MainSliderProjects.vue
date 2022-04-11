@@ -4,7 +4,9 @@
       <div class="d-flex flex-column my-10 justify-center align-center">
         <p class="header-min pb-0">OUT PORTFOLIO</p>
         <p class="font-title header-title">PROJECTS</p>
-        <p class="p-info">Since 1989, Sweenor Builders has built beautiful legacy homes in coastal Rhode Island. <br>Our portfolio features collaborations with Southern New England’s leading architects<br> and a range of in-house design/build and interior design services.</p>
+        <p class="p-info">
+          Serving Sonoma, and Napa Countries. Including Petaluma, Cotati, Rohnert Park, Santa Rosa, Windsor, Napa and Calistoga.
+        </p>
       </div>
       <div class="slider-projects">
         <swiper

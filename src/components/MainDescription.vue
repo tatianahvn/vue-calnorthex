@@ -6,9 +6,9 @@
 					YOUR PROJECT SUCCESS IS OUR BUSINESS
 				</p>
 				<p>
-					The heartbeat of our company is always in people, whether it’s our customers or employees. 
-					We strive to improve and exceed expectations. We know your site schedules are critical therefore you can count on us to supply and install your underfloor heating system on time, 
-					within budget and with our outstanding service.
+					The heartbeat of our company is always our customers.
+					We strive to improve and exceed expectations. By listening to customers ideas or concerns
+					and keeping them imformed of the process from start to finish.
 				</p>
 				<div class="squares" v-show="windowSize.x > 960 ? true : false">
 					<div class="square-red"></div>

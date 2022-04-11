@@ -6,7 +6,7 @@
         <div>
           <h1 class="font-title title-component mb-2"> WE LOVE WHAT WE DO...</h1>
           <p>
-            We want the journey of building your project to be pleasant. No matter how to big or small your project is. Calnorthex Concrete
+            We want the journey of building your project to be pleasant. No matter how to big or small your project is.<br>Calnorthex Concrete
             offers you a solution and ideas to fulfill your needs.
           </p>
         </div>

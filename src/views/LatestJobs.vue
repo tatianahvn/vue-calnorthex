@@ -2,7 +2,7 @@
   <div class="container--fluid pageLatestJobs">
     <div class="latestJobs-wrap">
       <div class="first-section d-flex flex-column flex-md-row">
-        <v-col cols="12" md="5" class="pa-0">
+        <v-col cols="12" md="6" class="pa-0">
             <v-img class="latestJob-photo" :src="require(`@/assets/images/gallery/${detailsJob.image}`)"></v-img>
         </v-col>
         <v-col cols="12" md="5" class="main-description mx-auto pa-3 pa-md-8 my-8">

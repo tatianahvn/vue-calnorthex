@@ -5,7 +5,7 @@
         <p class="header-min pb-0">OUT PORTFOLIO</p>
         <p class="font-title header-title">PROJECTS</p>
         <p class="p-info">
-          Serving Sonoma, and Napa Countries. Including Petaluma, Cotati, Rohnert Park, Santa Rosa, Windsor, Napa and Calistoga.
+          Serving Sonoma, and Napa Countries. Including Petaluma, Cotati<br>Rohnert Park, Santa Rosa, Windsor, Napa and Calistoga.
         </p>
       </div>
       <div class="slider-projects">

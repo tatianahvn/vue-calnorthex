@@ -131,7 +131,8 @@
     z-index: 2
     cursor: default
     @include laptop 
-      padding: 3rem 2rem
+      padding: 2rem 0 2rem 0
+      height: 160px
 
     &-title 
       font-family: $font-title

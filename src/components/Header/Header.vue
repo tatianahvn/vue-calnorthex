@@ -1,7 +1,7 @@
 <template>
 	<v-app-bar v-resize="onResize"
 		class="app-nav"
-		:color="scrolled ? 'rgba(255, 255, 255, 0.95)' : 'white'"
+		color="white"
 		elevate-on-scroll 
 		fixed 
 		app 
@@ -11,9 +11,7 @@
 				<v-col class="pa-0">
 					<div class="d-flex flex-row justify-center align-center">
 						<router-link to="/">
-							<figure class="lg-calnorthex">
-								<img src="@/assets/images/img-lg-calnorthex.png"/>
-							</figure>
+							<img src="@/assets/images/img-lg-calnorthex.png" class="lg-calnorthex"/>
 						</router-link>
 						<p class="main-title mb-0">Calnorthex Concrete</p>
 						<v-spacer v-if="isMobile"></v-spacer>
@@ -185,9 +183,13 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+
 .app-nav::v-deep
+	background-color: white
+	height: fit-content!important
 	.v-toolbar__content
 		padding: 0
+		height: fit-content!important
 
 .main-title
 	padding-top: 8px
@@ -200,7 +202,8 @@ export default {
 	flex-direction: row 
 	justify-content: center 
 	align-content: center
-	transition: all 5s ease-out
+	transition: .5s
+	height: 100%
 
 	.wrap-menu
 		display: flex 
@@ -219,26 +222,25 @@ export default {
 
 	.lg-calnorthex
 		width: 230px
+		margin-top: 5px
+		transition: .5s
 		@include laptop
 			width: 240px
 
 .main-nav.scrolled
-	animation: reduce 1s ease-in-out forwards
+	height: 65px
+	opacity: .8
+	font-size: .5rem
 
 	&:before 
-		height: 1px 
+		height: 2px 
 
 	.lg-calnorthex
-		padding-top: 2px
-		animation: imageResize 1s ease-in-out forwards
-
-	.v-list-item__title
-		animation: fontSize 1s linear forwards
-
-.app-nav::v-deep
-	height: fit-content!important
-	.v-toolbar__content
-		height: 100%!important
+		margin-top: 5px
+		width: 165px
+		
+	.v-btn--icon.v-size--default .v-icon, .v-btn--fab.v-size--default .v-icon
+		font-size: 26px!important
 
 .menu
 	.v-list
@@ -283,18 +285,17 @@ export default {
 // Animations
 @keyframes reduce 
 	0% 
-		height: 85px 
-		
+		height: inherit
 	100% 
-		height: 45px
+		height: 60px
 		opacity: .8
 		font-size: .5rem
 
 @keyframes imageResize
 	0%
-		width: 240px
+		width: inherit
 	100%
-		width: 130px
+		width: 150px
 
 @keyframes fontSize 
 	0%

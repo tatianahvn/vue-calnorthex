@@ -7,7 +7,7 @@
 			</div>
 			<h1>{{ title }}</h1> 
 			<p>{{ description }}</p> 
-			<a href="#">{{ ctaBtn }}</a>
+			<div class="btnCTA" to="/contact">{{ ctaBtn }}</div>
 		</div>
 	</section>
 </template>
@@ -78,7 +78,7 @@ export default {
 				font-size: 1.5rem
 				text-align: center
 
-		a 
+		.btnCTA
 			color: white 
 			text-decoration: none 
 			background-color: $base-red 

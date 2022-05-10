@@ -47,14 +47,14 @@ import ProjectCard from './Cards/project-card.vue'
           //centeredSlides: true,
           
           autoplay: {
-              delay: 3000,
-              disableOnInteraction: false
+            delay: 3000,
+            disableOnInteraction: false
           },
           
           breakpoints: {
               300: {
                   slidesPerView: 1,
-                  spaceBetween: 20
+                  spaceBetween: 0
               },
               600: {
                   slidesPerView: 1,
@@ -134,7 +134,7 @@ import ProjectCard from './Cards/project-card.vue'
 <style lang="sass" scoped>
   .projects
     max-width: 100%
-    padding: 0 15px
+    padding: 0 10px
     @include laptop
       margin: 3em 0 6em
       padding: 0 20px

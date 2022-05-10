@@ -2,35 +2,33 @@
   <section class="services container--fluid" v-on:scroll.passive="handleScroll" >
     <div class="filter-layout"></div>
     <div class="services-wrap">
-      <v-row>
-        <v-col sm="12" md="6" style="z-index:2">
-          <div class="card-service services-left"
-            v-for="(item, index) in servicesLeft"
-            :key="item.title"
-            :id="`item-${index}`"
-          >
-            <span :class="`service-icons ${item.icon}`"></span>
-            <v-col>
-              <h2 class="card-service-title">{{item.title}}</h2>
-              <!--<p class="card-service-description">{{item.description}}</p>-->
-            </v-col>
-          </div>
-        </v-col>
+      <v-col sm="12" md="6" style="z-index:2">
+        <div class="card-service services-left"
+          v-for="(item, index) in servicesLeft"
+          :key="item.title"
+          :id="`item-${index}`"
+        >
+          <span :class="`service-icons ${item.icon}`"></span>
+          <v-col>
+            <h2 class="card-service-title">{{item.title}}</h2>
+            <!--<p class="card-service-description">{{item.description}}</p>-->
+          </v-col>
+        </div>
+      </v-col>
 
-        <v-col sm="12" md="6" style="z-index:2">
-          <div class="card-service services-right"
-            v-for="(item, index) in servicesRight"
-            :key="item.title"
-            :id="`item-${index}`"
-          >
-            <span :class="`service-icons ${item.icon}`"></span>
-            <v-col>
-              <h2 class="card-service-title">{{item.title}}</h2>
-              <!--<p class="card-service-description">{{item.description}}</p>-->
-            </v-col>
-          </div>
-        </v-col>
-      </v-row>
+      <v-col sm="12" md="6" style="z-index:2">
+        <div class="card-service services-right"
+          v-for="(item, index) in servicesRight"
+          :key="item.title"
+          :id="`item-${index}`"
+        >
+          <span :class="`service-icons ${item.icon}`"></span>
+          <v-col>
+            <h2 class="card-service-title">{{item.title}}</h2>
+            <!--<p class="card-service-description">{{item.description}}</p>-->
+          </v-col>
+        </div>
+      </v-col>
     </div>
   </section>
 </template>
@@ -86,9 +84,12 @@
     padding: 3rem
 
   .services-wrap
+    display: flex 
+    flex-direction: column 
     z-index: 2
     padding: 3rem 0
     @include laptop
+      flex-direction: row
       padding: 0
   .services-left
     flex-direction: column
@@ -140,7 +141,7 @@
       text-transform: uppercase
       color: white
       margin-bottom: 5px
-      font-size: 1.4rem
+      font-size: 1rem
       //width: 50%
       //max-width: 170px
       //margin: auto

@@ -47,7 +47,7 @@ export default {
 	height: auto
 	.main-info
 		width: 100%
-		padding: 2rem
+		padding: 1rem 15px
 		height: 100% 
 		font-size: 1.3rem
 		text-align: center

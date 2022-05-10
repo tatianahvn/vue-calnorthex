@@ -12,9 +12,8 @@
         outlined
         class="mt-8"
         to="/contact"
-        
       >
-        CONTACT US FOR A FREE PROJECT QUOTE
+        CONTAT US
       </v-btn>
     </div>
   </section>
@@ -33,7 +32,7 @@
 .presentation-services 
   position: relative
   background-color: $soft-white
-  padding: 2rem
+  padding: 2rem 15px
   @include laptop
     padding: 4rem 0 5rem
 

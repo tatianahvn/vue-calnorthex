@@ -8,14 +8,15 @@
     app
     >
     <div class="head-sidebar">
-      <v-btn @click="hideSidebar()" :color="styleColors.baseRed" icon ><v-icon>mdi-close</v-icon></v-btn>
+		<v-btn 
+			@click="hideSidebar()" 
+			color="#9C171F"
+			icon
+		>
+			<v-icon>mdi-close</v-icon>
+		</v-btn>
     </div>
       <v-list dense nav>
-		<v-list-item link>
-          <v-list-item-content>
-            <v-list-item-title @click="this.goHome">Home</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
         <v-list-item  
           v-for="item in navItems"
           :key="item.title"
@@ -76,6 +77,7 @@ export default {
 		hideSidebar(){
 			this.$emit('close')
 		},
+		/*
 		goToSection(elID){
 			if(elID == 'home'){
 				this.goHome()
@@ -89,10 +91,12 @@ export default {
 			}
 		},
 		goHome(){
-			this.$router.push('/')
-		},
+			if(this.$route.path != '/'){
+					
+				}
+			this.hideSidebar()
+		},*/
 		redirect(type, value){
-		
 			if(type == 'scroll'){
 				let data = {
 					scrollingActive: true,
@@ -103,22 +107,25 @@ export default {
 				if(this.isHome)
 					document.getElementById(`${value}`).scrollIntoView({ behavior: 'smooth'})
 				else 
-					this.goHome()
-
-				this.hideSidebar()
+					this.$router.push({
+						path: '/'
+					})
 
 			}else {
-				console.log('id: ',value)
 				let data = {
 					scrollingActive: false,
 					sectionID: value
 				}
 				this.$store.commit('setRedirectMode', data)
-
-				this.$router.push({
-					path: `/${ value }`
-				})
+				
+				if(this.$route.path != `/${ value }`){
+					this.$router.push({
+						path: `/${ value }`
+					})
+				}
 			}
+
+			this.hideSidebar()
 		}
 	}
 }

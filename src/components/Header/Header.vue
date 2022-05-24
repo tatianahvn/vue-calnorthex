@@ -19,8 +19,8 @@
 						<v-spacer v-if="isMobile"></v-spacer>
 						<v-btn v-if="isMobile"
 							@click.stop="showSidebar()"
-							icon
 							:style="scrolled ? 'margin-top: -10px': ''"
+							icon
 						>
 							<v-icon>mdi-menu</v-icon>
 						</v-btn>
@@ -28,18 +28,11 @@
 				</v-col>
 			<v-col v-if="!isMobile" class="pa-0">
 				<v-row class="wrap-menu menu">
-				<v-list text>
+				<v-list>
 					<v-list-item-group 
 						v-model="menuSelection"
 						active-class="active"
 					>
-						<v-list-item 
-							link
-							class="menu-item item-home"
-							@click="this.goHome"
-						>
-							<v-list-item-title>Home</v-list-item-title>
-						</v-list-item>
 						<v-list-item 
 							v-for="(item, index) in navItems"
 							:key="item.title"
@@ -142,7 +135,9 @@ export default {
 				if(this.isHome)
 					document.getElementById(`${value}`).scrollIntoView({ behavior: 'smooth'})
 				else 
-					this.goHome()
+					this.$router.push({
+						path: '/'
+					})
 
 			}else {
 				let data = {
@@ -151,14 +146,17 @@ export default {
 				}
 				this.$store.commit('setRedirectMode', data)
 
-				this.$router.push({
-					path: `/${ value }`
-				})
+				if(this.$route.path != `/${ value }`){
+					this.$router.push({
+						path: `/${ value }`
+					})
+				}
 			}
 		},
 		onResize() {
 			this.windowSize = { x: window.innerWidth, y: window.innerHeight }
 		},
+		/*
 		goToDefaultHome(){
 			let data = {
 				scrollingActive: false,
@@ -169,7 +167,7 @@ export default {
 		},
 		goHome(){
 			this.$router.push('/')
-		},
+		},*/
 		showSidebar(){
 			this.activeSidebar = !this.activeSidebar
 			this.$emit('handlerSidebar', this.activeSidebar)

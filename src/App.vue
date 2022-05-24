@@ -38,7 +38,7 @@ export default {
       activeSidebar: false,
       title: 'Qué ver',
       items: [
-          /*{ title: 'Home', id: 'home', type: 'url' },*/
+          { title: 'Home', id: 'section-main', type: 'scroll' },
           { title: 'Services', id: 'section-services', type: 'scroll' },
           { title: 'Gallery', id: 'section-gallery', type: 'scroll' },
 					{ title: 'Projects', id: 'jobs', type: 'url' },

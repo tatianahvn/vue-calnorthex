@@ -8,7 +8,7 @@
 						v-for="(item, index) in navItems"
 						:key="item.title"
 						:id="`item-${index}`"
-						@click="goToSection(item.id)"
+						@click="redirect(item.type, item.id)"
 					>
 						<span class="cursor-pointer">{{item.title}}</span>
 					</a>
@@ -93,12 +93,52 @@ export default {
   data(){
     return {
       menuSelection: 0,
-			socialMedia: [
-				{ name: 'facebook', url: '' },
-				{ name: 'instagram', url: '' },
-				//{ name: 'twitter', url: '' }
-			]
+		socialMedia: [
+			{ name: 'facebook', url: '' },
+			{ name: 'instagram', url: '' },
+			//{ name: 'twitter', url: '' }
+		]
     }
+  },
+  computed:{
+	isHome(){
+		if(this.$route.path == '/'){
+			return true
+		}else{
+			return false
+		}
+	}
+},
+  methods: {
+		redirect(type, value){
+		if(type == 'scroll'){
+			let data = {
+				scrollingActive: true,
+				sectionID: value
+			}
+			this.$store.commit('setRedirectMode', data)
+
+			if(this.isHome)
+				document.getElementById(`${value}`).scrollIntoView({ behavior: 'smooth'})
+			else 
+				this.$router.push({
+					path: '/'
+				})
+
+		}else {
+			let data = {
+				scrollingActive: false,
+				sectionID: value
+			}
+			this.$store.commit('setRedirectMode', data)
+			
+			if(this.$route.path != `/${ value }`){
+				this.$router.push({
+					path: `/${ value }`
+				})
+			}
+		}
+	}
   }
 
 }

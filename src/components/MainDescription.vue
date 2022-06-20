@@ -1,7 +1,7 @@
 <template>
 	<section class="main-description container my-md-10">
 		<div class="main-description-wrap d-flex flex-column flex-md-row">
-			<v-col class="main-info pa-sm-5 pa-md-8">
+			<v-col class="main-info pa-sm-5">
 				<p class="info-title py-5">
 					YOUR PROJECT SUCCESS IS OUR BUSINESS
 				</p>
@@ -57,7 +57,7 @@ export default {
 			font-size: 1.5rem
 			min-height: 300px 
 			text-align: left
-			min-height: 650px 
+			min-height: 500px 
 
 		.info-title 
 			font-family: $font-title
@@ -93,7 +93,7 @@ export default {
 			width: 100%
 			height: 45vh
 			margin: auto
-			background: url('../assets/images/C1.jpg')
+			background: url('../assets/images/our_project_success.jpg')
 			background-size: cover 
 			background-position: center
 			z-index: 1

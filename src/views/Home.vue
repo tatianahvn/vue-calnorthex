@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <MainBanner/>
+    <MainSlider/>
+    <!-- <MainBanner/> -->
+    <MainShortContact/>
     <MainDescription/>
     <ServicesPresentation/>
     <MainServices/>
@@ -12,9 +14,10 @@
 
 <script>
 // @ is an alias to /src
-import MainBanner from '@/components/MainBanner'
-import MainDescription from '@/components/MainDescription'
+import MainSlider from '@/components/MainSlider'
+import MainShortContact from '@/components/MainShortContact'
 import MainServices from '@/components/MainServices'
+import MainDescription from '@/components/MainDescription'
 import MainGallery from '@/components/MainGallery'
 import MainSliderProjects from '@/components/MainSliderProjects'
 import ServicesPresentation from '@/components/ServicesPresentation'
@@ -23,8 +26,9 @@ import BannerWeLove from '@/components/BannerWeLove'
 
 export default {
   components: {
-    MainBanner,
+    MainSlider,
     MainDescription,
+    MainShortContact,
     MainServices,
     ServicesPresentation,
     MainSliderProjects,

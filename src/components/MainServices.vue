@@ -77,7 +77,7 @@
 <style lang="sass" scoped>
 .services 
   position: relative
-  background-image: url('../assets/images/hero-animated/slider01.jpeg')
+  //background-image: url('../assets/images/hero-animated/slider01.jpeg')
   background-position: center 
   background-size: cover
   @include laptop
@@ -122,7 +122,7 @@
     height: 100% 
     top: 0
     left: 0
-    background-color: rgb(35 0 0 / 60%)
+    background-color: rgb(0 0 0 / 70%)
     
   .card-service
     display: flex 
@@ -149,9 +149,13 @@
       font-size: 1.2rem
       color: $white-80
     
-    &:hover
+    /*&:hover
+      color: $base-red
       .service-icons
-        background-color: $base-yellow
+        background-color: $base-red
+      .card-service-title
+        color: $base-red
+      */
     .service-icons 
       margin: auto 1rem
 

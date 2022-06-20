@@ -10,8 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "firebase": "^8.9.0",
-    "vue": "^2.6.11",
     "swiper": "^5.4.5",
+    "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
     "vue-head": "^2.2.0",
     "vue-router": "^3.5.1",

@@ -10,6 +10,7 @@
       <v-btn
         large
         outlined
+        dark
         class="mt-8"
         to="/contact"
       >
@@ -31,7 +32,7 @@
 <style lang="sass" scoped>
 .presentation-services 
   position: relative
-  background-color: $soft-white
+  background-color: #0c0c0c
   padding: 2rem 15px
   @include laptop
     padding: 4rem 0 5rem
@@ -45,7 +46,7 @@
     letter-spacing: 0.18rem
     text-transform: uppercase
     line-height: 2rem
-    color: $soft-black
+    color: white
     text-align: center
     z-index: 1
     margin: 2rem auto
@@ -55,12 +56,12 @@
   p 
     width: 100% 
     margin: auto
-    color: $common-black
+    color: white
     font-size: 1.3rem
     line-height: 1.8rem
     text-align: justify
     @include laptop 
-      width: 65% 
+      width: 100% 
       font-size: 1.5rem
       line-height: 2rem
       text-align: center

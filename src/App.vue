@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app dark>
-      <Header :nav-items="items" @handlerSidebar="showSidebar()"/>
+      <HeaderV2 :nav-items="items" @handlerSidebar="showSidebar()"/>
       <Sidebar :nav-items="items" :showSidebar="activeSidebar" @close="closeSidebar"/>
 
       <v-main class="pa-0">
@@ -14,13 +14,13 @@
 </template>
 <script>
 
-import Header from '@/components/Header/Header'
+import HeaderV2 from '@/components/Header/Header-v2'
 import Sidebar from '@/components/Header/Sidebar'
 import Footer from '@/components/Footer'
 
 export default {
   components: {
-    Header,
+    HeaderV2,
     Sidebar,
     Footer
   },

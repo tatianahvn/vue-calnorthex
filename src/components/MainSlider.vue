@@ -135,7 +135,7 @@ import 'swiper/css/swiper.css'
                 line-height: 3.5rem
                 width: 40%
                 padding-right: 5%
-                color: $white-80
+                color: white
             .btn-quote
                 color: white 
 

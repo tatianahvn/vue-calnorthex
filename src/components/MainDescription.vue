@@ -7,16 +7,18 @@
 				</p>
 				<p>
 					The heartbeat of our company is always our customers.
-					We strive to improve and exceed expectations. By listening to customers ideas or concerns
+					We strive to improve and exceed expectations. <br><br v-if="windowSize.x > 960"> By listening to customers ideas or concerns
 					and keeping them imformed of the process from start to finish.
 				</p>
+				<img src="@/assets/images/img-lg-calnorthex.png" class="lg-calnorthex"/>
+				<!--
 				<div class="squares" v-show="windowSize.x > 960 ? true : false">
 					<div class="square-red"></div>
 					<div class="square-gray"></div>
-				</div>
+				</div>-->
 			</v-col >
 			<v-col class="complement pa-0">
-					<div class="bg-portrait"></div>
+				<div class="bg-portrait"></div>
 			</v-col>
 		</div>
 	</section>
@@ -56,9 +58,11 @@ export default {
 			padding: 1rem
 			font-size: 1.5rem
 			min-height: 300px 
-			text-align: left
+			text-align: inherit
 			min-height: 500px 
-
+		.lg-calnorthex
+			width: 400px
+			margin: 10%
 		.info-title 
 			font-family: $font-title
 			letter-spacing: .18rem
@@ -69,17 +73,16 @@ export default {
 			color: $base-red
 			text-align: center
 			@include laptop
-				font-size: 2rem
+				font-size: 2.5rem
 				text-align: left
-				line-height: 2rem
+				line-height: 2.5rem
 		
 		p 
-			line-height: 1.8rem
 			text-align: justify
 			color: $common-black
 			@include laptop
 				text-align: left
-				line-height: 2rem
+				font-size: 1.25rem
 
 	.complement  
 		position: relative
@@ -94,25 +97,14 @@ export default {
 			height: 45vh
 			margin: auto
 			background: url('../assets/images/our_project_success.jpg')
-			background-size: cover 
-			background-position: center
-			z-index: 1
-			@include laptop
-				width: calc(100% - 20px)
-				height: calc(100% - 15px)
-
-		&:before
-			@include laptop
-				content:''
-				width: calc(100% - 20px)
-				height: calc(100% - 20px)
-				margin: auto
-				z-index: 1
-				position: absolute
-				background-color: $base-red 
-				right: 0px
-				bottom: 0px
+			background-size: 240%
+			background-position: 27%
+			filter: grayscale(.5)
 			
+			@include laptop
+				width: 100%
+				height: 100%
+
 	.squares 
 		position: relative
 		display: flex 

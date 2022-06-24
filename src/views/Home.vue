@@ -2,11 +2,11 @@
   <div class="home">
     <MainSlider/>
     <!-- <MainBanner/> -->
-    <MainShortContact/>
+    <!--MainShortContact/>-->
     <MainDescription/>
     <ServicesPresentation/>
     <MainServices/>
-    <MainSliderProjects/>
+    <!--<MainSliderProjects/>-->
     <BannerWeLove/>
     <MainGallery/>
   </div>
@@ -15,11 +15,11 @@
 <script>
 // @ is an alias to /src
 import MainSlider from '@/components/MainSlider'
-import MainShortContact from '@/components/MainShortContact'
+//import MainShortContact from '@/components/MainShortContact'
 import MainServices from '@/components/MainServices'
 import MainDescription from '@/components/MainDescription'
 import MainGallery from '@/components/MainGallery'
-import MainSliderProjects from '@/components/MainSliderProjects'
+//import MainSliderProjects from '@/components/MainSliderProjects'
 import ServicesPresentation from '@/components/ServicesPresentation'
 import BannerWeLove from '@/components/BannerWeLove'
 
@@ -28,10 +28,10 @@ export default {
   components: {
     MainSlider,
     MainDescription,
-    MainShortContact,
+    //MainShortContact,
     MainServices,
     ServicesPresentation,
-    MainSliderProjects,
+    //MainSliderProjects,
     MainGallery,
     BannerWeLove
   },

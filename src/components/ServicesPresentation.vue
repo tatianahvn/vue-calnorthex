@@ -57,13 +57,11 @@
     width: 100% 
     margin: auto
     color: white
-    font-size: 1.3rem
-    line-height: 1.8rem
+    font-size: 1.25rem
     text-align: justify
     @include laptop 
-      width: 100% 
-      font-size: 1.5rem
-      line-height: 2rem
+      width: 70% 
+      font-size: 1.25rem
       text-align: center
 
 

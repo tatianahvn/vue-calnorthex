@@ -1,41 +1,38 @@
 <template>
     <section class="main-slider" id="main-slider">
             <!--<img src="@/assets/images/icons/scroll-bar.png" class="icon-scroll"/>-->
+        <div class="slide-content-overlay">
             <div class="slide-content-details">
                 <div class="info-logo"></div>
                 <p class="slide-title">WE BUILD CONCRETE SOLUTIONS FOR FULFILL YOUR NEEDS</p>
                 <p class="slide-subtitle">No matter how to big or small your project is.</p>
-                <v-btn large outlined dark class="btn-quote mt-8" to="/contact">
-                    FREE QUOTE
-                </v-btn>
-                
+                <a href="tel:+7074907975">
+                    <v-btn large outlined dark class="btn-quote mt-8">
+                        FREE QUOTE
+                    </v-btn>
+                </a>
             </div>
+        </div>
         <swiper ref="mySwiper" :options="swiperOptions">
-
             <swiper-slide>
                 <div class="slide-content slide-content-slide-1">
-                    <div class="overlay-filter"></div>
                     <!--<div class="info-logo"></div>-->
                 </div>            
             </swiper-slide>
             <swiper-slide>
                 <div class="slide-content slide-content-slide-2">
-                    <div class="overlay-filter"></div>
                 </div>            
             </swiper-slide>
             <swiper-slide>
                 <div class="slide-content slide-content-slide-3">
-                    <div class="overlay-filter"></div>
                 </div>            
             </swiper-slide>
             <swiper-slide>
                 <div class="slide-content slide-content-slide-4">
-                    <div class="overlay-filter"></div>
                 </div>            
             </swiper-slide>
             <swiper-slide>
                 <div class="slide-content slide-content-slide-5">
-                    <div class="overlay-filter"></div>
                 </div>            
             </swiper-slide>
 
@@ -93,7 +90,9 @@ import 'swiper/css/swiper.css'
     .swiper-container::v-deep
         width: 100% 
         height: 100%
+        z-index: inherit
         .swiper-pagination-bullet
+            z-index: 2
             background: white
             margin: 7px 
             width: 12px 
@@ -105,37 +104,56 @@ import 'swiper/css/swiper.css'
         width: 100% 
         height: 100%
         background-size: cover 
-        &-details 
+        &-overlay
             position: absolute 
             top: 0
             left: 0
             right: 0
             width: 100% 
             height: 100%
+            z-index: 2
+            pointer-events: none
+            background: linear-gradient(360deg, #000000db, transparent)
+            @include laptop
+                background: linear-gradient(84deg, #000000db, transparent)
+        &-details
             display: flex 
             flex-direction: column 
-            justify-content: center 
-            align-items: flex-start
-            width: 100% 
+            justify-content: center
+            align-items: center 
+            width: 100%
             height: 100%
+            //padding-bottom: 20%
             color: white 
-            text-align: left
-            margin-left: 5%
-            z-index: 99
-            pointer-events: none
-            .slide-title 
-                font-size: 2.5rem
+            @include laptop
+                align-items: flex-start 
+                max-width: 1200px
+                margin: auto
+            .slide-title
+                width: 250px
+                font-size: 1.5rem
+                line-height: 1.5rem
                 font-weight: 600
-                line-height: 2.5rem
-                width: 40%
-                padding-right: 5%
+                text-align: center
+                @include laptop
+                    font-size: 2.5rem
+                    line-height: 2.5rem
+                    width: 550px
+                    text-align: left
             .slide-subtitle
-                font-size: 1.25rem
+                font-size: 1rem
+                line-height: 1rem
                 font-weight: 500
-                line-height: 3.5rem
-                width: 40%
-                padding-right: 5%
+                width: 250px
                 color: white
+                text-align: center
+                @include laptop 
+                    font-size: 1.25rem
+                    font-weight: 500
+                    line-height: 3.5rem
+                    width: 550px
+                    text-align: left
+
             .btn-quote
                 color: white 
 
@@ -167,18 +185,6 @@ import 'swiper/css/swiper.css'
         &-slide-5
             background-image: url('~@/assets/images/main-slider/slide05.jpg')
             background-position: 0 50%
-
-        .overlay-filter
-            position: absolute 
-            top: 0
-            left: 0
-            right: 0
-            width: 100% 
-            height: 100%
-            //background-image: linear-gradient(47deg, #000000db 20%, transparent)
-            background-color: rgba(0, 0, 0, 0.45)
-
-
 
         .slide-content-title 
             font-size: 4rem

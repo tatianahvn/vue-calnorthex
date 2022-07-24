@@ -61,18 +61,21 @@ export default {
 			text-align: inherit
 			min-height: 500px 
 		.lg-calnorthex
-			width: 400px
-			margin: 10%
+			width: 70%
+			margin: 10% auto 
+			@include laptop
+				width: 400px
+				margin: 10%
 		.info-title 
 			font-family: $font-title
-			letter-spacing: .18rem
 			text-transform: uppercase
-			line-height: 2rem
 			font-size: 1.5rem
-			font-weight: 500
+			font-weight: 600
 			color: $base-red
 			text-align: center
+			padding: 1rem
 			@include laptop
+				padding: 0
 				font-size: 2.5rem
 				text-align: left
 				line-height: 2.5rem

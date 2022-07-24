@@ -77,7 +77,7 @@
 <style lang="sass" scoped>
 .services 
   position: relative
-  //background-image: url('../assets/images/hero-animated/slider01.jpeg')
+  background-image: url('../assets/images/kubota.jpeg')
   background-position: center 
   background-size: cover
   @include laptop

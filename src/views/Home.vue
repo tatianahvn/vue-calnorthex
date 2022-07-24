@@ -7,6 +7,8 @@
     <ServicesPresentation/>
     <MainServices/>
     <!--<MainSliderProjects/>-->
+    <VideoConcrete/>
+    <Testimonials/>
     <BannerWeLove/>
     <MainGallery/>
   </div>
@@ -22,6 +24,8 @@ import MainGallery from '@/components/MainGallery'
 //import MainSliderProjects from '@/components/MainSliderProjects'
 import ServicesPresentation from '@/components/ServicesPresentation'
 import BannerWeLove from '@/components/BannerWeLove'
+import VideoConcrete from '@/components/VideoConcrete'
+import Testimonials from '@/components/Testimonials'
 
 
 export default {
@@ -33,7 +37,9 @@ export default {
     ServicesPresentation,
     //MainSliderProjects,
     MainGallery,
-    BannerWeLove
+    BannerWeLove,
+    VideoConcrete,
+    Testimonials
   },
   mounted(){
     let redirectMode = this.$store.state.redirectMode 

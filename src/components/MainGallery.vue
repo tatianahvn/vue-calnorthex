@@ -29,17 +29,12 @@ export default {
 
   data:() =>  ({
     galleryItems: [
-      { title: 'Driveway', location: 'Coronado, CA', src: 'C8.jpg' }, 
-      { title: 'Driveway', location: 'Coronado, CA', src: 'A1.jpg' }, 
-      { title: 'Driveway', location: 'Coronado, CA', src: 'E3.jpg' }, 
-
-      { title: 'Driveway', location: 'Coronado, CA', src: 'G5.jpg' }, 
-      { title: 'Driveway', location: 'Coronado, CA', src: 'G6.jpg' }, 
-      { title: 'Driveway', location: 'Coronado, CA', src: 'H12.jpg' }, 
-
-      { title: 'Driveway', location: 'Coronado, CA', src: 'D1.jpg' }, 
-      { title: 'Driveway', location: 'Coronado, CA', src: 'B2.jpg' }, 
-      { title: 'Driveway', location: 'Coronado, CA', src: 'B3.jpg' }, 
+      { title: 'Driveway', location: 'Coronado, CA', src: 'gallery-5.jpg' },
+      { title: 'Driveway', location: 'Coronado, CA', src: 'gallery-1.jpg' },
+      { title: 'Driveway', location: 'Coronado, CA', src: 'gallery-2.jpg' },
+      { title: 'Driveway', location: 'Coronado, CA', src: 'gallery-3.jpg' }, 
+      { title: 'Driveway', location: 'Coronado, CA', src: 'gallery-7.jpg' }, 
+      { title: 'Driveway', location: 'Coronado, CA', src: 'gallery-6.jpg' }, 
     ],
 
     windowSize: {

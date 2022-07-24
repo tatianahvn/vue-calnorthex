@@ -8,46 +8,45 @@
     >
 		<v-container fluid class="pa-0">
 			<div :class="scrolled ? 'main-nav scrolled': 'main-nav'">
-				<v-col class="pa-0">
-					<div class="d-flex flex-row justify-center align-center">
-						<router-link to="/">
-							<img src="@/assets/images/img-lg-calnorthex.png" class="lg-calnorthex"/>
-						</router-link>
-						<p class="main-title mb-0">Calnorthex Concrete</p>
-						<v-spacer v-if="isMobile"></v-spacer>
-						<v-btn v-if="isMobile"
-							@click.stop="showSidebar()"
-							:style="scrolled ? 'margin-top: -10px': ''"
-							icon
-						>
-							<v-icon>mdi-menu</v-icon>
-						</v-btn>
-					</div>
-				</v-col>
-			<v-col v-if="!isMobile" class="pa-0">
-				<v-row class="wrap-menu menu">
-				<v-list>
-					<v-list-item-group 
-						v-model="menuSelection"
-						active-class="active"
+				<div class="d-flex flex-row justify-space-between justify-md-star align-center">
+					<router-link to="/">
+						<img src="@/assets/images/img-lg-calnorthex.png" class="lg-calnorthex"/>
+					</router-link>
+					<v-btn v-if="isMobile"
+						@click.stop="showSidebar()"
+						:style="scrolled ? 'margin-top: -10px': ''"
+						icon
 					>
-						<v-list-item 
-							v-for="(item, index) in navItems"
-							:key="item.title"
-							link
-							:class="`menu-item item-${index}`"
-							:id="`item-${index}`"
-							:ref="`item-${index}`"
-							@click="redirect(item.type, item.id)"
+						<v-icon>mdi-menu</v-icon>
+						x
+					</v-btn>
+				</div>
+				<div v-if="!isMobile" class="wrap-menu menu">
+					<v-list>
+						<v-list-item-group 
+							v-model="menuSelection"
+							active-class="active"
 						>
-							<v-list-item-title>{{item.title}}</v-list-item-title>
-						</v-list-item>
-					</v-list-item-group>
+							<v-list-item 
+								v-for="(item, index) in navItems"
+								:key="item.title"
+								link
+								:class="`menu-item item-${index}`"
+								:id="`item-${index}`"
+								:ref="`item-${index}`"
+								@click="redirect(item.type, item.id)"
+							>
+								<v-list-item-title>{{item.title}}</v-list-item-title>
+							</v-list-item>
+							
+						</v-list-item-group>
 					</v-list>
-							</v-row>
-			</v-col>
+					<a class="contact-phone" href="tel:(707)-490-7975">
+						(707)-490-7975
+					</a>
+				</div>
 			</div>
-			</v-container>
+		</v-container>
 	</v-app-bar>
 </template>
 
@@ -198,14 +197,15 @@ export default {
 .main-nav 
 	display: flex 
 	flex-direction: row 
-	justify-content: center 
+	justify-content: space-between
 	align-content: center
-	transition: .5s
-	height: 100%
+	transition: 1s
+	height: 85px
 
 	.wrap-menu
 		display: flex 
-		justify-content: space-evenly
+		flex-direction: row
+		justify-content: center
 		align-content: center 
 		font-size: 1.5rem
 		height: 100%
@@ -218,10 +218,11 @@ export default {
 		bottom: 0
 		background: linear-gradient(90deg, $base-gray 0, $base-red)
 
+
 	.lg-calnorthex
 		width: 230px
 		margin-top: 5px
-		transition: .5s
+		transition: 1s
 		@include laptop
 			width: 240px
 
@@ -229,6 +230,7 @@ export default {
 	height: 65px
 	opacity: .8
 	font-size: .5rem
+	transition: 1s
 
 	&:before 
 		height: 2px 
@@ -236,6 +238,10 @@ export default {
 	.lg-calnorthex
 		margin-top: 5px
 		width: 165px
+
+	.contact-phone
+		transition: 1s
+		margin-top: 1%
 		
 	.v-btn--icon.v-size--default .v-icon, .v-btn--fab.v-size--default .v-icon
 		font-size: 26px!important
@@ -246,7 +252,6 @@ export default {
 		flex-direction: row
 		padding: 0
 		background: rgba(0,0,0,0)
-		height: 100%
 		font-family: $font-title
 		text-transform: uppercase
 	
@@ -258,10 +263,12 @@ export default {
 		.v-list-item
 			padding: 0 16px
 			text-decoration: none
-			min-width: 8.5rem
+			min-width: fit-content
 			text-align: center
-			height: 100%
-			color: $base-gray
+			color: $soft-black
+			&::after, 
+			&::before 
+				display: none
 
 	.menu-item.active 
 		color: $base-red
@@ -270,11 +277,24 @@ export default {
 		font-size: 1rem
 		font-weight: 500
 		
+.contact-phone
+	transition: 1s
+	width: 170px
+	margin-top: 2.5%
+	padding: 1rem
+	height: 50px
+	font-size: 1rem
+	line-height: 1rem
+	vertical-align: center
+	font-weight: 600
+	color: white!important 
+	background-color: $base-red
+	text-decoration: none
 
 .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)
-	color: $soft-black !important
+	color: $soft-black
 	&:hover 
-		color: $base-red !important
+		color: $base-red
 
 .theme--light.v-btn.v-btn--icon
 	color: $base-gray

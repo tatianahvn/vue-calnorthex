@@ -1,13 +1,10 @@
 <template>
   <v-card 
-    class="photo-card rounded-3 elevation-0 ma-3"
-    @mouseenter="activeCard = true"
-    @mouseleave="activeCard = false"
+    class="photo-card rounded-3 elevation-0 ma-0 ma-md-3"
   >
     <v-img 
       class="photo" 
-      height="40vh"
-      min-height="450px"
+      height="28vw"
       :src="require(`@/assets/images/gallery/${item.src}`)">
     </v-img>
     <div class="layout" v-if="activeCard" transition="fade-transition">
@@ -39,7 +36,9 @@ export default {
   .photo-card
     position: relative
     cursor: default
-    box-shadow: 2px 4px 12px rgba(0,0,0,.4)!important
+    box-shadow: 2px 4px 12px rgba(0,0,0,.4)!important 
+    transition: all 1s!important
+    
     .layout
       position: absolute 
       top: 0
@@ -68,6 +67,12 @@ export default {
         color: white
         text-transform: uppercase
 
+    &:hover
+      .v-image::v-deep
+        transition: all 1s
+        .v-image__image
+          background-size: 200%
+
   @keyframes overlay
     0%, 50%
       opacity: 0
@@ -75,4 +80,5 @@ export default {
     50%, 100%
       opacity: 1
       background-color: rgba(0, 0, 0, .5)
+
 </style>

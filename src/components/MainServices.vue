@@ -2,7 +2,7 @@
   <section class="services container--fluid" v-on:scroll.passive="handleScroll" >
     <div class="filter-layout"></div>
     <div class="services-wrap">
-      <v-col sm="12" md="6" style="z-index:2">
+      <v-col sm="12" md="6" class="px-3" style="z-index:2">
         <div class="card-service services-left"
           v-for="(item, index) in servicesLeft"
           :key="item.title"
@@ -16,7 +16,7 @@
         </div>
       </v-col>
 
-      <v-col sm="12" md="6" style="z-index:2">
+      <v-col sm="12" md="6" class="px-3" style="z-index:2">
         <div class="card-service services-right"
           v-for="(item, index) in servicesRight"
           :key="item.title"
@@ -112,7 +112,6 @@
     color: white
     text-align: center
     z-index: 2
-    letter-spacing: 5px
     margin: 2rem auto
 
   
@@ -127,7 +126,7 @@
   .card-service
     display: flex 
     width: 100% 
-    padding: 1rem
+    padding: 2rem 1rem
     color: white 
     z-index: 2
     cursor: default
@@ -137,11 +136,12 @@
 
     &-title 
       font-family: $font-title
-      letter-spacing: .18rem
       text-transform: uppercase
       color: white
       margin-bottom: 5px
-      font-size: 1rem
+      font-size: 1.25rem
+      @include laptop 
+        font-size: 1.25rem
       //width: 50%
       //max-width: 170px
       //margin: auto
@@ -158,6 +158,8 @@
       */
     .service-icons 
       margin: auto 1rem
+      width: 80px
+      height: 80px
 
   .icon-measure
     width: 55px

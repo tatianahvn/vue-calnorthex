@@ -1,8 +1,8 @@
 <template>
-  <section class="testimonials container--fluid  mt-15">
-    <div class="container">
+  <section class="testimonials container--fluid">
+    <div class="container py-5">
       <div class="d-flex flex-column my-10 justify-center align-center">
-        <p class="font-title header-title">What our customer says</p>
+        <p class="font-title header-title">WHAT OUT CUSTOMER SAYS?</p>
       </div>
       <div class="slider-testimonials mb-5">
         <swiper
@@ -15,7 +15,7 @@
           >
             <TestimonialCard :dataCard="item"/>
           </swiper-slide>
-          <!--<div class="swiper-pagination" slot="pagination"></div>-->
+          <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
       </div>
     </div>
@@ -37,9 +37,6 @@ import TestimonialCard from './Cards/testimonial-card.vue'
       return{
         swiperOption: {
           //loop: true,
-          
-          slidesPerView: 3,
-          spaceBetween: 80,
           //centeredSlides: true,
           
           /*autoplay: {
@@ -50,10 +47,10 @@ import TestimonialCard from './Cards/testimonial-card.vue'
           breakpoints: {
               300: {
                   slidesPerView: 1,
-                  spaceBetween: 0
+                  spaceBetween: 10
               },
               600: {
-                  slidesPerView: 1,
+                  slidesPerView: 2,
                   spaceBetween: 20
               },
               960: {
@@ -86,22 +83,26 @@ import TestimonialCard from './Cards/testimonial-card.vue'
     max-width: 100%
     padding: 0 10px
     @include laptop
-      margin: 3em 0 6em
       padding: 1rem
 
     .header-min
       font-size: 1rem
       text-transform: uppercase
-      letter-spacing: 5px
+      letter-spacing: 3px
       color: black
     .header-title
-      font-size: 2.5rem
-      letter-spacing: 5px
-      font-weight: 500
-      margin-bottom: 50px
+      font-size: 1.5rem
+      font-weight: 600
+      text-align: center
+      margin-bottom: 25px
+      line-height: 1.5rem
+      padding: 1rem 2rem
       @include laptop
+        font-size: 2.5rem
         margin-botom: 20px
+        padding: 0
     p 
+      width: 100%
       font-size: 1.2rem
       line-height: 1.5rem
       @include laptop
@@ -123,6 +124,9 @@ import TestimonialCard from './Cards/testimonial-card.vue'
     .slider-projects
       max-width: 1200px
       margin: auto
+
+    .swiper-container
+      padding-bottom: 65px
             
     .swiper-pagination ::v-deep
         position: absolute
@@ -131,8 +135,8 @@ import TestimonialCard from './Cards/testimonial-card.vue'
         transform: translate3d(0, 0, 0)
         z-index: 10
         .swiper-pagination-bullet
-            width: 6px
-            height: 6px
+            width: 10px
+            height: 10px
             background: $base-red!important
         .swiper-pagination-bullet-active
             background: $base-red!important

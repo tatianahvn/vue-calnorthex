@@ -8,8 +8,8 @@
     <MainServices/>
     <!--<MainSliderProjects/>-->
     <VideoConcrete/>
-    <Testimonials/>
     <BannerWeLove/>
+    <Testimonials/>
     <MainGallery/>
   </div>
 </template>

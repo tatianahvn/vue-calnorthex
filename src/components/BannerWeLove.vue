@@ -41,12 +41,12 @@
   flex-direction: column
   position: relative
   background-color: #232323
-  height: 120vh
+  height: 100vh
   @include laptop
     height: 100vh
   .img-asset 
     width: 100% 
-    height: 55% 
+    height: 50% 
     background-image: url('~@/assets/images/we-love-what-we-do.png')
     background-position: top right
     background-size: 226%
@@ -58,8 +58,8 @@
 
   .title-component 
     font-size: 1.3rem 
+    font-weight: 600
     color: white
-    letter-spacing: 3px
     @include laptop
       font-size: 1.8rem 
       
@@ -72,7 +72,9 @@
   p 
     width: 100%
     max-width: 900px
-    font-size: 1.25rem
+    font-size: 1.18rem
     color: $white-80
+    @include laptop 
+      font-size: 1.25rem
 
 </style>

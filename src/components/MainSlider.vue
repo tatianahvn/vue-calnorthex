@@ -7,9 +7,9 @@
                 <p class="slide-title">WE BUILD CONCRETE SOLUTIONS FOR FULFILL YOUR NEEDS</p>
                 <p class="slide-subtitle">No matter how to big or small your project is.</p>
                 <a href="tel:+7074907975">
-                    <v-btn large outlined dark class="btn-quote mt-8">
+                    <div class="btn-quote mt-8">
                         FREE QUOTE
-                    </v-btn>
+                    </div>
                 </a>
             </div>
         </div>
@@ -53,10 +53,11 @@ import 'swiper/css/swiper.css'
                 swiperOptions: {
                     slidesPerView: 1,
                     spaceBetween: 0,
+                    /*
                     autoplay: {
                         delay: 10000,
                         disableOnInteraction: true
-                    },
+                    },*/
                     pagination: {
                         el: '.swiper-pagination',
                         clickable: true
@@ -75,7 +76,9 @@ import 'swiper/css/swiper.css'
 .main-slider
     position: relative
     width: 100vw
-    height: 100vh
+    height: 92vh
+    @include laptop 
+        height: 100vh
     .icon-scroll
         position: absolute 
         width: 64px 
@@ -85,12 +88,24 @@ import 'swiper/css/swiper.css'
         left: 0
         margin: auto
         z-index: 99
+    .btn-quote 
+        padding: 10px 15px
+        border: 1px solid white 
+        border-radius: 5px
+        font-size: 16px
+        font-weight: 500
+    a 
+        text-decoration: none
 
     
     .swiper-container::v-deep
         width: 100% 
         height: 100%
         z-index: inherit
+        .swiper-pagination
+            bottom: 10% 
+            @include laptop 
+                bottom: 5%
         .swiper-pagination-bullet
             z-index: 2
             background: white
@@ -170,21 +185,30 @@ import 'swiper/css/swiper.css'
 
         &-slide-1
             background-image: url('~@/assets/images/main-slider/slide02.jpg')
-            background-position: 0 15%
-            //transform: rotate(120deg)
+            background-position: 59% 15%
+            @include laptop
+                background-position: 0 15%
 
         &-slide-2
             background-image: url('~@/assets/images/main-slider/slide03.jpg')
             background-position: 0 100%
+            @include laptop
+                background-position: 0 100%
         &-slide-3
             background-image: url('~@/assets/images/main-slider/slide01.jpg')
-            background-position: 0 50%
+            background-position: 50% 50%
+            @include laptop
+                background-position: 0 50%
         &-slide-4
             background-image: url('~@/assets/images/main-slider/slide04.jpg')
             background-position: 0 50%
+            @include laptop
+                background-position: 0 50%
         &-slide-5
             background-image: url('~@/assets/images/main-slider/slide05.jpg')
             background-position: 0 50%
+            @include laptop
+                background-position: 0 50%
 
         .slide-content-title 
             font-size: 4rem

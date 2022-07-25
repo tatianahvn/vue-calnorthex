@@ -28,7 +28,6 @@
   .title-component 
     font-size: 1.5rem
     font-weight: 500
-    letter-spacing: 0.18rem
     text-transform: uppercase
     line-height: 2rem
     color: white

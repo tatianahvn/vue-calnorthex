@@ -81,6 +81,7 @@ export default {
 				line-height: 2.5rem
 		
 		p 
+			font-size: 1.18rem
 			text-align: justify
 			color: $common-black
 			@include laptop

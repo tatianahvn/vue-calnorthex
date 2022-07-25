@@ -5,7 +5,7 @@
         <p class="header-min pb-0">OUT PORTFOLIO</p>
         <p class="font-title header-title">PROJECTS</p>
         <p class="p-info">
-          Serving Sonoma, and Napa Countries. Including Petaluma, Cotati<br>Rohnert Park, Santa Rosa, Windsor, Napa and Calistoga.
+          Serving Sonoma, and Napa Counties. Including Petaluma, Cotati<br>Rohnert Park, Santa Rosa, Windsor, Napa and Calistoga.
         </p>
       </div>
       <div class="slider-projects">
@@ -142,11 +142,9 @@ import ProjectCard from './Cards/project-card.vue'
     .header-min
       font-size: 1rem
       text-transform: uppercase
-      letter-spacing: 5px
       color: black
     .header-title
       font-size: 2.5rem
-      letter-spacing: 5px
       font-weight: 500
       margin-bottom: 50px
       @include laptop

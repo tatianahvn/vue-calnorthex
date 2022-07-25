@@ -4,7 +4,6 @@
   >
     <v-img 
       class="photo" 
-      height="28vw"
       :src="require(`@/assets/images/gallery/${item.src}`)">
     </v-img>
     <div class="layout" v-if="activeCard" transition="fade-transition">
@@ -38,6 +37,11 @@ export default {
     cursor: default
     box-shadow: 2px 4px 12px rgba(0,0,0,.4)!important 
     transition: all 1s!important
+
+    .photo
+      height: 87vw
+      @include laptop
+        height:  28vw
     
     .layout
       position: absolute 
@@ -59,7 +63,6 @@ export default {
         font-size: 1.5rem 
         text-align: center 
         color: white
-        letter-spacing: 5px
         text-transform: uppercase
       .subtitle-card
         font-size: .8rem 

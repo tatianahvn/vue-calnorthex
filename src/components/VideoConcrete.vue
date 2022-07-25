@@ -2,7 +2,7 @@
 <template>
     <section class="videoConcrete container mb-15">
         <div class="d-flex flex-column my-10 justify-center align-center">
-            <p class="header-min pb-0">PROFFESIONAL CONCRETE</p>
+            <p class="header-min mb-0">PROFFESIONAL CONCRETE</p>
             <p class="font-title header-title">HOW CONCRETE IS MADE?</p>
         </div>
         <video width="100%" controls>
@@ -22,16 +22,20 @@
         align-items: center
         .header-min
             font-size: 1rem
+            letter-spacing: 3px
             text-transform: uppercase
-            letter-spacing: 5px
             color: black
         .header-title
-            font-size: 2.5rem
-            letter-spacing: 5px
-            font-weight: 500
+            font-size: 1.5rem
+            font-weight: 600
             margin-bottom: 25px
-        @include laptop
-            margin-botom: 20px
+            line-height: 1.5rem
+            text-align: center
+            padding: 1rem
+            @include laptop
+                font-size: 2.5rem
+                margin-botom: 20px
+                padding: 0
         p 
             font-size: 1.2rem
             line-height: 1.5rem

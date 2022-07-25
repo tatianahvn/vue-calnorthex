@@ -31,6 +31,7 @@
         min-height: 400px
         background-color: white
         color: $common-black
+        cursor: default
         .img-star
             width: 20px
             height: 20px

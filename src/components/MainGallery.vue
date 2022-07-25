@@ -6,7 +6,8 @@
       </div>
       <v-row>
         <v-col 
-          :cols="windowSize.x < 960 ? '12' : '4'"
+          cols="12"
+          sm="4"
           v-for="(item, index) in galleryItems"
           :key="index"
         >
@@ -55,14 +56,13 @@ export default {
 <style lang="sass" scoped>
 .gallery
   background-color: white
+  padding-bottom: 30px
   .header-min
     font-size: 1rem
     text-transform: uppercase
-    letter-spacing: 5px
     color: black
   .header-title
     font-size: 2.5rem
-    letter-spacing: 5px
     font-weight: 500
   
 </style>

@@ -121,11 +121,9 @@ export default {
     .header-min
       font-size: 1rem
       text-transform: uppercase
-      letter-spacing: 5px
       color: black
     .header-title
       font-size: 2.5rem
-      letter-spacing: 5px
       font-weight: 500
       margin-bottom: 50px
       @include laptop

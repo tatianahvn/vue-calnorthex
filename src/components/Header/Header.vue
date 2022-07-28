@@ -8,18 +8,17 @@
     >
 		<v-container fluid class="pa-0">
 			<div :class="scrolled ? 'main-nav scrolled': 'main-nav'">
-				<div class="d-flex flex-row justify-space-between justify-md-star align-center">
+				<div class="d-flex flex-row justify-space-between justify-md-star align-center w-100">
 					<router-link to="/">
 						<img src="@/assets/images/img-lg-calnorthex.png" class="lg-calnorthex"/>
 					</router-link>
-					<v-btn v-if="isMobile"
-						@click.stop="showSidebar()"
+
+					<div v-if="isMobile"
+						@click="showSidebar()"
 						:style="scrolled ? 'margin-top: -10px': ''"
-						icon
 					>
-						<v-icon>mdi-menu</v-icon>
-						x
-					</v-btn>
+						<div class="icon-menu mr-4"></div>
+					</div>
 				</div>
 				<div v-if="!isMobile" class="wrap-menu menu">
 					<v-list>
@@ -290,6 +289,18 @@ export default {
 	color: white!important 
 	background-color: $base-red
 	text-decoration: none
+
+.icon-menu
+	width: 25px
+	height: 25px
+	mask: url('../../assets/images/icons/menu.png')
+	mask-size: cover
+	background-color: $base-gray
+	margin: auto
+	margin-right: 10px
+
+.w-100
+	width: 100%
 
 .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)
 	color: $soft-black

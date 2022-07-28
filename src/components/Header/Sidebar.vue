@@ -1,36 +1,31 @@
 <template>
-  <v-navigation-drawer
-    v-model="showSidebar"
-    color="#fff"
-    right
-    temporary
-    fixed
-    app
+	<v-navigation-drawer
+		v-model="showSidebar"
+		color="#fff"
+		right
+		fixed
+		touchless
     >
-    <div class="head-sidebar">
-		<v-btn 
-			@click="hideSidebar()" 
-			color="#9C171F"
-			icon
-		>
-			<v-icon>mdi-close</v-icon>
-		</v-btn>
-    </div>
-      <v-list dense nav>
-        <v-list-item  
-          v-for="item in navItems"
-          :key="item.title"
-          link>
-          <v-list-item-content>
-            <v-list-item-title 
-				@click="redirect(item.type, item.id)"
-			>
-				{{ item.title }}
-			</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+		<div class="head-sidebar">
+			<div @click="hideSidebar()">
+				<div class="icon-close"></div>
+			</div>
+		</div>
+		<v-list dense nav>
+			<v-list-item  
+			v-for="item in navItems"
+			:key="item.title"
+			link>
+			<v-list-item-content>
+				<v-list-item-title 
+					@click="redirect(item.type, item.id)"
+				>
+					{{ item.title }}
+				</v-list-item-title>
+			</v-list-item-content>
+			</v-list-item>
+		</v-list>
+	</v-navigation-drawer>
 </template>
 
 <script>
@@ -147,7 +142,7 @@ export default {
 		.v-list-item__title
 			font-size: 1.5rem
 			padding: .5rem
-  
+
 	.head-sidebar
 		width: 100% 
 		display: flex 
@@ -164,4 +159,12 @@ export default {
 	.theme--light.v-btn.v-btn--icon
 		color: $base-red	
 
+.icon-close
+	width: 20px
+	height: 20px
+	mask: url('../../assets/images/icons/close.png')
+	mask-size: cover
+	background-color: $base-gray
+	margin: auto
+	margin-right: 10px
 </style>

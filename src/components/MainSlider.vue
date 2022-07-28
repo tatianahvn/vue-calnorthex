@@ -1,5 +1,5 @@
 <template>
-    <section class="main-slider" id="main-slider">
+    <section class="main-slider" id="section-main">
             <!--<img src="@/assets/images/icons/scroll-bar.png" class="icon-scroll"/>-->
         <div class="slide-content-overlay">
             <div class="slide-content-details">

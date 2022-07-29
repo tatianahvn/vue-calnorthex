@@ -53,11 +53,10 @@ import 'swiper/css/swiper.css'
                 swiperOptions: {
                     slidesPerView: 1,
                     spaceBetween: 0,
-                    /*
                     autoplay: {
-                        delay: 10000,
+                        delay: 8000,
                         disableOnInteraction: true
-                    },*/
+                    },
                     pagination: {
                         el: '.swiper-pagination',
                         clickable: true

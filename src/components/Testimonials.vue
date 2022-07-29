@@ -2,7 +2,7 @@
   <section class="testimonials container--fluid">
     <div class="container py-5">
       <div class="d-flex flex-column my-10 justify-center align-center">
-        <p class="font-title header-title">WHAT OUT CUSTOMER SAYS?</p>
+        <p class="font-title header-title">WHAT OUR CUSTOMERS SAYS?</p>
       </div>
       <div class="slider-testimonials mb-5">
         <swiper
@@ -36,13 +36,13 @@ import TestimonialCard from './Cards/testimonial-card.vue'
     data() {
       return{
         swiperOption: {
-          //loop: true,
+          loop: true,
           //centeredSlides: true,
           
-          /*autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
-          },*/
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: true
+          },
           
           breakpoints: {
               300: {

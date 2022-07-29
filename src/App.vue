@@ -41,7 +41,6 @@ export default {
           { title: 'Home', id: 'section-main', type: 'scroll' },
           { title: 'Services', id: 'section-services', type: 'scroll' },
           { title: 'Gallery', id: 'section-gallery', type: 'scroll' },
-					{ title: 'Projects', id: 'jobs', type: 'url' },
 					{ title: 'Contact', id: 'contact', type: 'url'}
       ],
       windowSize: {

@@ -8,7 +8,7 @@
         <v-col cols="12" md="6" class="main-description pa-8">
           <h1 class="font-title title-component text-center mt-5 mt-md-0">CONTACT INFO</h1>
           <div class="separator"></div>
-          <p class="pt-2">Phone: (707) 490-7975 </p>
+          <p class="pt-2">Phone: <a href="tel:7074907975">(707) 490-7975</a></p>
           <p>Email: <a href="mailto:calnorthex@gmail.com">calnorthex@gmail.com </a></p>
           <p class="pt-2 txt-bold">HOURS OF OPERATION </p>
           <p class="txt-center">Monday to friday: 8:00 AM to 6:00 PM <br>

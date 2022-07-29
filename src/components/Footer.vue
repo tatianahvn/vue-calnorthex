@@ -17,14 +17,18 @@
 			<v-col>
 				<div class="footer-contact d-flex flex-column align-center align-md-start">
 					<h1 class="mb-5">Contact Us</h1>
-					<div class="d-flex justify-center align-center my-2">
-						<div class="icon-email"></div>
-						<span class="cursor-pointer">calnorthex@gmail.com</span>
-					</div>
-					<div class="d-flex justify-center align-center my-2">
-						<div class="icon-phone"></div>
-						<span>(707) 490-7975</span>
-					</div>
+					<a href="mailto:calnorthex@gmail.com">
+						<div class="d-flex justify-center align-center my-2">
+							<div class="icon-email"></div>
+							<span class="cursor-pointer">calnorthex@gmail.com</span>
+						</div>
+					</a>
+					<a href="tel:7074907975">
+						<div class="d-flex justify-center align-center my-2">
+							<div class="icon-phone"></div>
+							<span class="cursor-pointer contact-phone">(707) 490-7975</span>
+						</div>
+					</a>
 					<br>
 					<h1 class="mt-6 mb-3">CONTRACTORS LICENSE</h1>
 					<span style="letter-spacing: 2px;"><strong>#1051560</strong></span>
@@ -36,7 +40,7 @@
 						<span>Monday to friday: 8:00 AM to 6:00 PM</span>
 						<span>Saturday: Only by appoiment</span>
 						<span>Sunday: Closed</span>
-						<br><br>
+					<!-- 
 					<div class="d-flex flex-column align-center align-md-start justify-center">
 					<h1 class="mt-6 mb-3">Social Media</h1> 
 					<div class="d-flex flex-row">
@@ -51,7 +55,7 @@
 							<v-icon dark link>{{`mdi-${item.name}`}}</v-icon>
 						</v-btn>
 					</div>
-				</div>
+				</div>-->
 				
 				</div>
 			</v-col>
@@ -160,6 +164,7 @@ export default {
 	color: $light-gray
 	line-height: 14px
 	padding: 20px 10px
+	font-size: 1rem
 .footer-wrap
 	width: 100%
 	display: flex 
@@ -180,6 +185,8 @@ export default {
 	span 
 		font-size: 1rem
 		color: $white-80
+	.contact-email, .contact-phone 
+		font-size: 1.2rem
 	
 	.cursor-pointer
 		cursor: pointer
@@ -227,4 +234,6 @@ export default {
 		background-color: $white-80
 		margin: auto
 		margin-right: 10px
+	a
+		text-decoration: none
 </style>

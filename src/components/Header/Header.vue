@@ -40,8 +40,12 @@
 							
 						</v-list-item-group>
 					</v-list>
-					<a class="contact-phone" href="tel:(707)-490-7975">
-						(707)-490-7975
+					
+					<a href="tel:(707)-490-7975">
+						<div class="contact-phone d-flex justify-space-around align-center">
+							<div class="icon-phone ml-2"></div>
+							<p class="mb-0 mr-2">(707) 490-7975</p>
+						</div>
 					</a>
 				</div>
 			</div>
@@ -152,18 +156,6 @@ export default {
 		onResize() {
 			this.windowSize = { x: window.innerWidth, y: window.innerHeight }
 		},
-		/*
-		goToDefaultHome(){
-			let data = {
-				scrollingActive: false,
-				sectionID: null
-			}
-			this.$store.commit('setRedirectMode', data)
-			this.goHome()
-		},
-		goHome(){
-			this.$router.push('/')
-		},*/
 		showSidebar(){
 			this.activeSidebar = !this.activeSidebar
 			this.$emit('handlerSidebar', this.activeSidebar)
@@ -227,7 +219,6 @@ export default {
 
 .main-nav.scrolled
 	height: 65px
-	opacity: .8
 	font-size: .5rem
 	transition: 1s
 
@@ -240,7 +231,7 @@ export default {
 
 	.contact-phone
 		transition: 1s
-		margin-top: 1%
+		margin-top: 4%
 		
 	.v-btn--icon.v-size--default .v-icon, .v-btn--fab.v-size--default .v-icon
 		font-size: 26px!important
@@ -278,9 +269,8 @@ export default {
 		
 .contact-phone
 	transition: 1s
-	width: 170px
-	margin-top: 2.5%
-	padding: 1rem
+	width: 175px
+	margin-top: 8.5%
 	height: 50px
 	font-size: 1rem
 	line-height: 1rem
@@ -288,7 +278,7 @@ export default {
 	font-weight: 600
 	color: white!important 
 	background-color: $base-red
-	text-decoration: none
+
 
 .icon-menu
 	width: 25px
@@ -298,6 +288,16 @@ export default {
 	background-color: $base-gray
 	margin: auto
 	margin-right: 10px
+
+.icon-phone
+	width: 24px
+	height: 24px
+	mask: url('../../assets/images/icons/phone.svg')
+	mask-size: cover
+	background-color: white
+
+a
+	text-decoration: none
 
 .w-100
 	width: 100%

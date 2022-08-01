@@ -14,7 +14,7 @@
         class="mt-8"
         to="/contact"
       >
-        CONTAT US
+        CONTACT US
       </v-btn>
     </div>
   </section>

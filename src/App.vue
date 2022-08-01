@@ -29,6 +29,9 @@ export default {
       { rel: 'stylesheet', href: 'myProjects/webProject/icofont/css/icofont.min.css' },
     ]
   },
+  metaInfo: {
+    title: 'Calnorthex Concrete'
+  },
   data () {
     return {
       drawer: false,
@@ -52,6 +55,7 @@ export default {
 
   mounted(){
     this.onResize
+    //document.title = "Calnorthex Concrete"
   },
   methods:{
       onResize() {

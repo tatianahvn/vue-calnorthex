@@ -8,7 +8,7 @@
 				<p>
 					The heartbeat of our company is always our customers.
 					We strive to improve and exceed expectations. <br><br v-if="windowSize.x > 960"> By listening to customers ideas or concerns
-					and keeping them imformed of the process from start to finish.
+					and keeping them informed of the process from start to finish.
 				</p>
 				<img src="@/assets/images/img-lg-calnorthex.png" class="lg-calnorthex"/>
 				<!--

@@ -2,7 +2,7 @@
 <template>
     <section class="videoConcrete container mb-15">
         <div class="d-flex flex-column my-10 justify-center align-center">
-            <p class="header-min mb-0">PROFFESIONAL CONCRETE</p>
+            <p class="header-min mb-0">PROFESSIONAL CONCRETE</p>
             <p class="font-title header-title">HOW CONCRETE IS MADE?</p>
         </div>
         <video width="100%" controls>

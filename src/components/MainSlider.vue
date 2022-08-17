@@ -6,7 +6,7 @@
                 <div class="info-logo"></div>
                 <p class="slide-title">WE BUILD CONCRETE SOLUTIONS FOR FULFILL YOUR NEEDS</p>
                 <p class="slide-subtitle">No matter how to big or small your project is.</p>
-                <a href="tel:+7074907975">
+                <a href="tel:(707)-490-7975">
                     <div class="btn-quote mt-8">
                         FREE QUOTE
                     </div>
@@ -53,6 +53,7 @@ import 'swiper/css/swiper.css'
                 swiperOptions: {
                     slidesPerView: 1,
                     spaceBetween: 0,
+                    loop: true,
                     autoplay: {
                         delay: 8000,
                         disableOnInteraction: true
@@ -93,9 +94,6 @@ import 'swiper/css/swiper.css'
         border-radius: 5px
         font-size: 16px
         font-weight: 500
-    a 
-        text-decoration: none
-
     
     .swiper-container::v-deep
         width: 100% 
@@ -167,7 +165,9 @@ import 'swiper/css/swiper.css'
                     line-height: 3.5rem
                     width: 550px
                     text-align: left
-
+            a 
+                text-decoration: none
+                pointer-events: auto
             .btn-quote
                 color: white 
 

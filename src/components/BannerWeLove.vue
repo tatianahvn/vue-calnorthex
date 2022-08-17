@@ -12,14 +12,16 @@
           </p>
         </div>
         <div>
-          <v-btn
-            large
-            outlined
-            dark
-            class="my-8"
-          >
-            FREE QUOTE
-          </v-btn>
+          <a href="tel:(707)-490-7975">
+            <v-btn
+              large
+              outlined
+              dark
+              class="my-8"
+            >
+              FREE QUOTE
+            </v-btn>
+          </a>
         </div>
       </div>
     </div>
@@ -55,7 +57,8 @@
       height: 70% 
       background-position: 50% 15%
       background-size: 100%
-
+  a 
+    text-decoration: none
   .title-component 
     font-size: 1.3rem 
     font-weight: 600

@@ -5,7 +5,7 @@
             <div class="slide-content-details">
                 <div class="info-logo"></div>
                 <p class="slide-title">WE BUILD CONCRETE SOLUTIONS FOR FULFILL YOUR NEEDS</p>
-                <p class="slide-subtitle">No matter how to big or small your project is.</p>
+                <p class="slide-subtitle">No matter how big or small your project is.</p>
                 <a href="tel:(707)-490-7975">
                     <div class="btn-quote mt-8">
                         FREE QUOTE

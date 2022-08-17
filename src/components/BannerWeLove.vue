@@ -6,7 +6,7 @@
         <div class="pt-8 px-8 pa-md-0">
           <h1 class="font-title title-component mb-2"> WE LOVE WHAT WE DO...</h1>
           <p class="pt-5 pt-m-0 text-justify">
-            No matter how to big or small your project is, Calnorthex Concrete offers you a solution
+            No matter how big or small your project is, Calnorthex Concrete offers you a solution
             and ideas to fulfill your needs. We want the journey of building your project to be pleasant. 
 
           </p>

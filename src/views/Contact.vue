@@ -10,7 +10,7 @@
           <div class="separator"></div>
           <p class="pt-2">Phone: <a href="tel:7074907975">(707) 490-7975</a></p>
           <p>Email: <a href="mailto:calnorthex@gmail.com">calnorthex@gmail.com </a></p>
-          <p class="pt-2 txt-bold">HOURS OF OPERATION </p>
+          <p class="pt-2 txt-bold">OPERATION HOURS</p>
           <p class="txt-center">Monday to friday: 8:00 AM to 6:00 PM <br>
               Saturday: only by appoiment 
           </p>

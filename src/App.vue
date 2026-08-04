@@ -24,13 +24,10 @@ export default {
     Sidebar,
     Footer
   },
-  head:{
-    link: [
-      { rel: 'stylesheet', href: 'myProjects/webProject/icofont/css/icofont.min.css' },
-    ]
-  },
+  // Fallback for routes that do not define their own metaInfo. Every view
+  // overrides this through pageMeta() in @/seo.
   metaInfo: {
-    title: 'Calnorthex Concrete'
+    title: 'Concrete Contractor in Santa Rosa, CA | Calnorthex Concrete'
   },
   data () {
     return {

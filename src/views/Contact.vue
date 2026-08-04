@@ -3,7 +3,7 @@
     <div class="page-wrap">
       <div class="first-section d-flex flex-column-reverse flex-md-row justify-center align-center">
         <v-col cols="12" md="6" class="pa-0">
-            <v-img class="latestJob-photo" :src="require(`@/assets/images/gallery/C2.jpg`)"></v-img>
+            <v-img class="latestJob-photo" alt="Finished concrete work by Calnorthex Concrete in Santa Rosa, CA" :src="require(`@/assets/images/gallery/C2.jpg`)"></v-img>
         </v-col>
         <v-col cols="12" md="6" class="main-description pa-8">
           <h1 class="font-title title-component text-center mt-5 mt-md-0">CONTACT INFO</h1>
@@ -22,10 +22,16 @@
   </div>
 </template>
 
-<script> 
+<script>
+import { pageMeta } from '@/seo'
 
 export default {
   name: 'Contact',
+  metaInfo: pageMeta({
+    title: 'Contact Us',
+    description: 'Get in touch with Calnorthex Concrete in Santa Rosa, CA. Call (707) 490-7975 or email calnorthex@gmail.com. Open Monday to Friday, 8:00 AM to 6:00 PM.',
+    path: '/contact'
+  }),
   mounted(){
     window.scrollTo(0, 0)
   }

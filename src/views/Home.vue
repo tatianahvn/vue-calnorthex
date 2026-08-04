@@ -24,9 +24,15 @@ import ServicesPresentation from '@/components/ServicesPresentation'
 import BannerWeLove from '@/components/BannerWeLove'
 import VideoConcrete from '@/components/VideoConcrete'
 import Testimonials from '@/components/Testimonials'
+import { pageMeta } from '@/seo'
 
 
 export default {
+  metaInfo: pageMeta({
+    title: 'Concrete Contractor in Santa Rosa, CA',
+    description: 'Licensed concrete contractor serving Santa Rosa, Sonoma and Napa Counties. Driveways, walkways, patios, slab foundations and excavation. Call (707) 490-7975 for a free quote.',
+    path: '/'
+  }),
   components: {
     MainSlider,
     MainDescription,

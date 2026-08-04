@@ -2,7 +2,7 @@
   <section class="presentation-services container--fluid" id="section-services">
     <div class="container">
       <v-row>
-        <h1 class="font-title title-component"> WE OFFER A WIDE RANGE OF SERVICES</h1>
+        <h2 class="font-title title-component"> WE OFFER A WIDE RANGE OF SERVICES</h2>
       </v-row>
       <p>
         Calnorthex Concrete provides a wide range of concrete services for residential clients in Sonoma and Napa Counties. Our company has the training and equipment to install everything from sidewalks and driveways to patios and pool decks, and it’s also qualified to handle related work like grading and drainage.

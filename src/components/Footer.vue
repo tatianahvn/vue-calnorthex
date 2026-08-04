@@ -3,7 +3,7 @@
 		<div class="footer-wrap container">
 			<v-col>
 				<div class="d-flex flex-column align-center align-md-start justify-center">
-					<h1 class="mb-5">Menu</h1>
+					<h2 class="mb-5">Menu</h2>
 					<a :class="`menu-item item-${index} my-3`"
 						v-for="(item, index) in navItems"
 						:key="item.title"
@@ -16,7 +16,7 @@
 			</v-col>
 			<v-col>
 				<div class="footer-contact d-flex flex-column align-center align-md-start">
-					<h1 class="mb-5">Contact Us</h1>
+					<h2 class="mb-5">Contact Us</h2>
 					<a href="mailto:calnorthex@gmail.com">
 						<div class="d-flex justify-center align-center my-2">
 							<div class="icon-email"></div>
@@ -30,19 +30,19 @@
 						</div>
 					</a>
 					<br>
-					<h1 class="mt-6 mb-3">CONTRACTORS LICENSE</h1>
+					<h2 class="mt-6 mb-3">CONTRACTORS LICENSE</h2>
 					<span style="letter-spacing: 2px;"><strong>#1051560</strong></span>
 				</div>
 			</v-col>
 			<v-col>
 				<div class="footer-contact d-flex flex-column align-center align-md-start">
-					<h1 class="mb-5">BUSINESS HOURS</h1>
+					<h2 class="mb-5">BUSINESS HOURS</h2>
 						<span>Monday to friday: 8:00 AM to 6:00 PM</span>
 						<span>Saturday: Only by appoiment</span>
 						<span>Sunday: Closed</span>
 					<!-- 
 					<div class="d-flex flex-column align-center align-md-start justify-center">
-					<h1 class="mt-6 mb-3">Social Media</h1> 
+					<h2 class="mt-6 mb-3">Social Media</h2> 
 					<div class="d-flex flex-row">
 						<v-btn :class="`menu-item item-${index} my-3 mr-5`"
 							v-for="(item, index) in socialMedia"
@@ -61,7 +61,7 @@
 			</v-col>
 			<!--<v-col>
 				<div class="d-flex flex-column align-center align-md-start justify-center">
-					<h1 class="mb-5">Social Media</h1> 
+					<h2 class="mb-5">Social Media</h2> 
 					<div class="d-flex flex-row">
 						<v-btn :class="`menu-item item-${index} my-3 mr-5`"
 							v-for="(item, index) in socialMedia"
@@ -176,7 +176,7 @@ export default {
 	@include laptop 
 		flex-direction: row 
 
-	h1 
+	h2 
 		font-size: 1rem 
 		color: $white-90
 		letter-spacing: 3px

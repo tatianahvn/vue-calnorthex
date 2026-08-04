@@ -2,7 +2,7 @@
   <section class="testimonials container--fluid">
     <div class="container py-5">
       <div class="d-flex flex-column my-10 justify-center align-center">
-        <p class="font-title header-title">WHAT OUR CUSTOMERS SAYS?</p>
+        <h2 class="font-title header-title">WHAT OUR CUSTOMERS SAYS?</h2>
       </div>
       <div class="slider-testimonials mb-5">
         <swiper

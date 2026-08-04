@@ -10,7 +10,7 @@
 			<div :class="scrolled ? 'main-nav scrolled': 'main-nav'">
 				<div class="d-flex flex-row justify-space-between justify-md-star align-center w-100">
 					<router-link to="/">
-						<img src="@/assets/images/img-lg-calnorthex.png" class="lg-calnorthex"/>
+						<img src="@/assets/images/img-lg-calnorthex.png" class="lg-calnorthex" alt="Calnorthex Concrete"/>
 					</router-link>
 
 					<div v-if="isMobile"

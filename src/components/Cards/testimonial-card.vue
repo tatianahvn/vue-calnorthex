@@ -1,9 +1,9 @@
 <template>
     <div class="testimonial-card mr-3 pa-5">
         <p class="testimonial-name">{{ dataCard.name}}</p>
-        <div class="testimonial-rank d-flex mb-2">
+        <div class="testimonial-rank d-flex mb-2" role="img" aria-label="Rated 5 out of 5 stars">
             <span v-for="n in 5" :key="n"> 
-                <img src="@/assets/images/icons/star.png" class="img-star"/>
+                <img src="@/assets/images/icons/star.png" class="img-star" alt=""/>
             </span>
         </div>
         <p class="testimonial-text">

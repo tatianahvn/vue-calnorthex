@@ -2,7 +2,7 @@
   <section class="container--fluid gallery" id="section-gallery">
     <div class="gallery-wrap py-10">
       <div class="d-flex flex-column justify-center align-center">
-        <p class="font-title header-title mx-auto py-10">GALLERY</p>
+        <h2 class="font-title header-title mx-auto py-10">GALLERY</h2>
       </div>
       <v-row>
         <v-col 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>Concrete Contractor in Santa Rosa, CA | Calnorthex Concrete</title>
+
+    <!--
+      Static SEO tags: social scrapers (Facebook, WhatsApp, LinkedIn, Slack) do not
+      execute JavaScript, so these must exist in the served HTML. They describe the
+      home page. On app start, main.js removes every tag marked with
+      data-static-seo so vue-meta can own per-route metadata without duplicates.
+    -->
+    <meta data-static-seo name="description" content="Concrete contractor serving Santa Rosa and all of Sonoma and Napa Counties. Driveways, walkways, patios, slab foundations and excavation. Licensed #1051560. Free quotes: (707) 490-7975.">
+    <meta data-static-seo property="og:type" content="website">
+    <meta data-static-seo property="og:site_name" content="Calnorthex Concrete">
+    <meta data-static-seo property="og:title" content="Concrete Contractor in Santa Rosa, CA | Calnorthex Concrete">
+    <meta data-static-seo property="og:description" content="Concrete contractor serving Santa Rosa and all of Sonoma and Napa Counties. Driveways, walkways, patios, slab foundations and excavation. Licensed #1051560.">
+    <meta data-static-seo property="og:url" content="https://calnorthex.com/">
+    <meta data-static-seo property="og:image" content="https://calnorthex.com/og-image.jpg">
+    <meta data-static-seo property="og:image:width" content="1200">
+    <meta data-static-seo property="og:image:height" content="630">
+    <meta data-static-seo property="og:locale" content="en_US">
+    <meta data-static-seo name="twitter:card" content="summary_large_image">
+    <meta data-static-seo name="twitter:title" content="Concrete Contractor in Santa Rosa, CA | Calnorthex Concrete">
+    <meta data-static-seo name="twitter:description" content="Concrete contractor serving Santa Rosa and all of Sonoma and Napa Counties. Driveways, walkways, patios, slab foundations and excavation.">
+    <meta data-static-seo name="twitter:image" content="https://calnorthex.com/og-image.jpg">
+    <link data-static-seo rel="canonical" href="https://calnorthex.com/">
+
+    <meta name="theme-color" content="#9C171F">
+
+    <!--
+      Site-wide structured data. Not managed by vue-meta: it describes the business,
+      not the current route, so it stays identical on every page.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GeneralContractor",
+      "@id": "https://calnorthex.com/#business",
+      "name": "Calnorthex Concrete",
+      "description": "Residential concrete contractor serving Sonoma and Napa Counties: driveways, walkways, patios, pool decks, slab foundations, concrete removal and replacement, and excavation.",
+      "url": "https://calnorthex.com/",
+      "telephone": "+1-707-490-7975",
+      "email": "calnorthex@gmail.com",
+      "image": "https://calnorthex.com/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santa Rosa",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Sonoma County, California" },
+        { "@type": "AdministrativeArea", "name": "Napa County, California" }
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "California Contractors License",
+        "value": "1051560"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Concrete and excavation services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Driveways & Walkways" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Removal & Replace Concrete" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Slab Foundation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Footing Excavation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Wall Excavation" } }
+        ]
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but Calnorthex Concrete doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

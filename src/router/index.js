@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home'
 import About from '../views/About'
-import Jobs from '../views/LatestJobs'
 import Contact from '../views/Contact'
 
 Vue.use(VueRouter)
@@ -19,14 +18,15 @@ const routes = [
     component: About 
   },
   {
-    path: '/jobs',
-    name: 'Jobs',
-    component: Jobs 
-  },
-  {
     path: '/contact',
     name: 'Contact',
-    component: Contact 
+    component: Contact
+  },
+  // Firebase Hosting rewrites every unknown path to index.html, so without this
+  // the app would render an empty page instead of sending the visitor home.
+  {
+    path: '*',
+    redirect: '/'
   },
 ]
 

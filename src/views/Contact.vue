@@ -3,7 +3,7 @@
     <div class="page-wrap">
       <div class="first-section d-flex flex-column-reverse flex-md-row justify-center align-center">
         <v-col cols="12" md="6" class="pa-0">
-            <v-img class="latestJob-photo" :src="require(`@/assets/images/gallery/C2.jpg`)"></v-img>
+            <v-img class="latestJob-photo" alt="Finished concrete work by Calnorthex Concrete in Santa Rosa, CA" :src="require(`@/assets/images/gallery/C2.jpg`)"></v-img>
         </v-col>
         <v-col cols="12" md="6" class="main-description pa-8">
           <h1 class="font-title title-component text-center mt-5 mt-md-0">CONTACT INFO</h1>
@@ -18,29 +18,20 @@
           <div class="separator"></div>
         </v-col>
       </div>
-      <!--
-      <v-row class="pictures-section" no-gutters>
-        <v-col cols="4"
-          v-for="(picture, index) in detailsJob.pictures"
-          :key="index"
-        >
-          <v-img aspect-ratio="1" class="fase-pictures" :src="require(`@/assets/images/gallery/${picture.src}`)"></v-img>
-        </v-col>
-      </v-row>
-      -->
     </div>
   </div>
 </template>
 
-<script> 
+<script>
+import { pageMeta } from '@/seo'
 
 export default {
-  name: 'LatestJobs',
-  computed: {
-    detailsJob(){
-        return this.$store.state.detailsJob
-    },
-  },
+  name: 'Contact',
+  metaInfo: pageMeta({
+    title: 'Contact Us',
+    description: 'Get in touch with Calnorthex Concrete in Santa Rosa, CA. Call (707) 490-7975 or email calnorthex@gmail.com. Open Monday to Friday, 8:00 AM to 6:00 PM.',
+    path: '/contact'
+  }),
   mounted(){
     window.scrollTo(0, 0)
   }
@@ -72,11 +63,7 @@ export default {
     font-size: 1.2rem
     color: #666
     text-align: justify
-  p.second-pagraph
-    width: 80% 
-    margin: auto
-    text-align: center
-  a 
+  a
     text-decoration: none
     color: $base-red
   .txt-center
@@ -89,15 +76,4 @@ export default {
     height: 10px
     border-top: 2px solid #dbdbdb
 
-  .second-section
-    background-color: #e8d2d3
-  .pictures-section
-    background-color: #e8d2d3
-    .fase-pictures 
-      max-height: 450px
-      filter: grayscale(100%) contrast(110%) brightness(90%)
-      transition: all .3s
-      &:hover 
-        filter: grayscale(0%) saturate(125%)
-  
 </style>

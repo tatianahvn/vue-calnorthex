@@ -10,7 +10,7 @@
         >
           <span :class="`service-icons ${item.icon}`"></span>
           <v-col>
-            <h2 class="card-service-title">{{item.title}}</h2>
+            <h3 class="card-service-title">{{item.title}}</h3>
             <!--<p class="card-service-description">{{item.description}}</p>-->
           </v-col>
         </div>
@@ -24,7 +24,7 @@
         >
           <span :class="`service-icons ${item.icon}`"></span>
           <v-col>
-            <h2 class="card-service-title">{{item.title}}</h2>
+            <h3 class="card-service-title">{{item.title}}</h3>
             <!--<p class="card-service-description">{{item.description}}</p>-->
           </v-col>
         </div>

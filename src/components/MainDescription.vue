@@ -2,15 +2,15 @@
 	<section class="main-description container my-md-10">
 		<div class="main-description-wrap d-flex flex-column flex-md-row">
 			<v-col class="main-info pa-sm-5">
-				<p class="info-title py-5">
+				<h2 class="info-title py-5">
 					YOUR PROJECT SUCCESS IS OUR BUSINESS
-				</p>
+				</h2>
 				<p>
 					The heartbeat of our company is always our customers.
 					We strive to improve and exceed expectations. <br><br v-if="windowSize.x > 960"> By listening to customers ideas or concerns
 					and keeping them informed of the process from start to finish.
 				</p>
-				<img src="@/assets/images/img-lg-calnorthex.png" class="lg-calnorthex"/>
+				<img src="@/assets/images/img-lg-calnorthex.png" class="lg-calnorthex" alt="Calnorthex Concrete"/>
 				<!--
 				<div class="squares" v-show="windowSize.x > 960 ? true : false">
 					<div class="square-red"></div>

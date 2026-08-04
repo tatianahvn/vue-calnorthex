@@ -1,15 +1,19 @@
 <template>
-  <v-card 
+  <v-card
     class="photo-card rounded-3 elevation-0 ma-0 ma-md-3"
   >
-    <v-img 
-      class="photo" 
-      :src="require(`@/assets/images/gallery/${item.src}`)">
-    </v-img>
-    <div class="layout" v-if="activeCard" transition="fade-transition">
-      <p class="title-card mb-0">{{ item.title }}</p>
-      <p class="subtitle-card">{{ item.location }}</p>
-    </div>
+    <!--
+      A native <img> rather than <v-img>: Vuetify paints the photo as the
+      background-image of a div, which search engines cannot index. These are
+      the only project photos on the site, so they are worth surfacing in
+      image search. The caption is not displayed, but it still describes the
+      photo through the alt text.
+    -->
+    <img
+      class="photo"
+      loading="lazy"
+      :src="require(`@/assets/images/gallery/${item.src}`)"
+      :alt="`${item.title} in ${item.location} by Calnorthex Concrete`">
   </v-card>
 </template>
 
@@ -22,66 +26,26 @@ export default {
       default: () => {},
       required: true
     }
-  },
-  data(){
-    return{
-      activeCard: false
-    }
   }
 }
 </script>
 
 <style lang="sass" scoped>
   .photo-card
-    position: relative
+    overflow: hidden
     cursor: default
-    box-shadow: 2px 4px 12px rgba(0,0,0,.4)!important 
-    transition: all 1s!important
+    box-shadow: 2px 4px 12px rgba(0,0,0,.4)!important
 
     .photo
+      display: block
+      width: 100%
       height: 87vw
+      object-fit: cover
+      transition: transform .6s ease
       @include laptop
-        height:  28vw
-    
-    .layout
-      position: absolute 
-      top: 0
-      left: 0
-      width: 100% 
-      height: 100% 
-      display: flex 
-      flex-direction: column
-      justify-content: center 
-      align-items: center
-      z-index: 1
-      opacity: 0
-      animation-name: overlay
-      animation-duration: 1.5s
-      animation-fill-mode: forwards
+        height: 28vw
 
-      .title-card 
-        font-size: 1.5rem 
-        text-align: center 
-        color: white
-        text-transform: uppercase
-      .subtitle-card
-        font-size: .8rem 
-        text-align: center 
-        color: white
-        text-transform: uppercase
-
-    &:hover
-      .v-image::v-deep
-        transition: all 1s
-        .v-image__image
-          background-size: 200%
-
-  @keyframes overlay
-    0%, 50%
-      opacity: 0
-      background-color: rgba(0, 0, 0, .5)
-    50%, 100%
-      opacity: 1
-      background-color: rgba(0, 0, 0, .5)
+    &:hover .photo
+      transform: scale(1.08)
 
 </style>

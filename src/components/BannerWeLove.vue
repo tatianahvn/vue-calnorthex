@@ -4,7 +4,7 @@
     <div class="info-details">
       <div class="pt-md-6 d-flex flex-column flex-md-row justify-md-space-between align-center">
         <div class="pt-8 px-8 pa-md-0">
-          <h1 class="font-title title-component mb-2"> WE LOVE WHAT WE DO...</h1>
+          <h2 class="font-title title-component mb-2"> WE LOVE WHAT WE DO...</h2>
           <p class="pt-5 pt-m-0 text-justify">
             No matter how big or small your project is, Calnorthex Concrete offers you a solution
             and ideas to fulfill your needs. We want the journey of building your project to be pleasant. 

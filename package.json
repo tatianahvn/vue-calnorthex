@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -13,7 +13,6 @@
     "swiper": "^5.4.5",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
-    "vue-head": "^2.2.0",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.5.1",
     "vuetify": "^2.4.0",
@@ -27,7 +26,6 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^6.0.0",
     "sass": "^1.32.0",
     "sass-loader": "^10.2.0",
     "style-resources-loader": "^1.4.1",

@@ -6,7 +6,6 @@
     <MainDescription/>
     <ServicesPresentation/>
     <MainServices/>
-    <!--<MainSliderProjects/>-->
     <VideoConcrete/>
     <BannerWeLove/>
     <Testimonials/>
@@ -21,7 +20,6 @@ import MainSlider from '@/components/MainSlider'
 import MainServices from '@/components/MainServices'
 import MainDescription from '@/components/MainDescription'
 import MainGallery from '@/components/MainGallery'
-//import MainSliderProjects from '@/components/MainSliderProjects'
 import ServicesPresentation from '@/components/ServicesPresentation'
 import BannerWeLove from '@/components/BannerWeLove'
 import VideoConcrete from '@/components/VideoConcrete'
@@ -35,7 +33,6 @@ export default {
     //MainShortContact,
     MainServices,
     ServicesPresentation,
-    //MainSliderProjects,
     MainGallery,
     BannerWeLove,
     VideoConcrete,

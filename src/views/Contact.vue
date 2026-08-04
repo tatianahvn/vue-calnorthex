@@ -18,16 +18,6 @@
           <div class="separator"></div>
         </v-col>
       </div>
-      <!--
-      <v-row class="pictures-section" no-gutters>
-        <v-col cols="4"
-          v-for="(picture, index) in detailsJob.pictures"
-          :key="index"
-        >
-          <v-img aspect-ratio="1" class="fase-pictures" :src="require(`@/assets/images/gallery/${picture.src}`)"></v-img>
-        </v-col>
-      </v-row>
-      -->
     </div>
   </div>
 </template>
@@ -35,12 +25,7 @@
 <script> 
 
 export default {
-  name: 'LatestJobs',
-  computed: {
-    detailsJob(){
-        return this.$store.state.detailsJob
-    },
-  },
+  name: 'Contact',
   mounted(){
     window.scrollTo(0, 0)
   }
@@ -72,11 +57,7 @@ export default {
     font-size: 1.2rem
     color: #666
     text-align: justify
-  p.second-pagraph
-    width: 80% 
-    margin: auto
-    text-align: center
-  a 
+  a
     text-decoration: none
     color: $base-red
   .txt-center
@@ -89,15 +70,4 @@ export default {
     height: 10px
     border-top: 2px solid #dbdbdb
 
-  .second-section
-    background-color: #e8d2d3
-  .pictures-section
-    background-color: #e8d2d3
-    .fase-pictures 
-      max-height: 450px
-      filter: grayscale(100%) contrast(110%) brightness(90%)
-      transition: all .3s
-      &:hover 
-        filter: grayscale(0%) saturate(125%)
-  
 </style>
